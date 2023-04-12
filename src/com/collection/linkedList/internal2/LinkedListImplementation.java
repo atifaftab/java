@@ -52,4 +52,19 @@ public class LinkedListImplementation {
             n.next = node;
         }
     }
+
+    void deleteAtIndex(int index) {
+        Node n = head;
+        Node n1 = null;
+        if (index == 0) {
+            head = head.next;
+        } else {
+
+            for (int i = 0; i < index - 1; i++) {
+                n = n.next;
+            }
+            n1 = n.next;
+            n.next = n1.next;
+        }
+    }
 }

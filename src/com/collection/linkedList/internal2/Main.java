@@ -11,11 +11,12 @@ public class Main {
         list.insert(345);
         list.insert(67);
         list.insert(1);
-
-        // list.show();
-
         list.insertStart(0);
         list.insertAtIndex(0, 100);
+        System.out.println("before deleting");
+        list.show();
+        list.deleteAtIndex(3);
+        System.out.println("after deleting");
         list.show();
     }
 }
