@@ -5,7 +5,7 @@
         answer[i] == "Buzz" if i is divisible by 5.
         answer[i] == i (as a string) if none of the above conditions are true.*/
 
-package com.leetCode.array;
+package com.leetCode;
 
 import java.util.ArrayList;
 import java.util.List;

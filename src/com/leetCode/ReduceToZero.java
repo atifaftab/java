@@ -1,4 +1,4 @@
-package com.leetCode.array;
+package com.leetCode;
 
 public class ReduceToZero {
     public static void main(String[] args) {
