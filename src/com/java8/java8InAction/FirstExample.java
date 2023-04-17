@@ -15,8 +15,10 @@ public class FirstExample {
         inventory.add(apple);
 
 
-        List<Apple> apples = filterGreenApples(inventory, "Green");
-        System.out.println(apples.get(0).getColor());
+        List<Apple> applesColors = filterGreenApples(inventory, "Green");
+        List<Apple> applesWeight = filterHeavyApples(inventory, 150);
+        System.out.println(applesColors.get(0).getColor());
+        System.out.println(applesWeight.get(0).getWeight());
 
     }
 
@@ -25,6 +27,17 @@ public class FirstExample {
 
         for (Apple apple : inventory) {
             if (color.equals(apple.getColor())) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public static List<Apple> filterHeavyApples(List<Apple> inventory, int weight) {
+        List<Apple> result = new ArrayList<>();
+
+        for (Apple apple : inventory) {
+            if (apple.getWeight() > weight) {
                 result.add(apple);
             }
         }
