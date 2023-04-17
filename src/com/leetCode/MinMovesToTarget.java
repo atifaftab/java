@@ -15,7 +15,7 @@ public class MinMovesToTarget {
 
     public static int counter(int target, int maxDoubles) {
         int c = 0;
-        while (target > 1 && maxDoubles > 0) {
+        while (target > 0 && maxDoubles > 0) {
             if (target % 2 == 0) {
                 maxDoubles --;
                 target /= 2;
