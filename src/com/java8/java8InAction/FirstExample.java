@@ -15,17 +15,16 @@ public class FirstExample {
         inventory.add(apple);
 
 
-
-        List<Apple> apples = filterGreenApples(inventory);
+        List<Apple> apples = filterGreenApples(inventory, "Green");
         System.out.println(apples.get(0).getColor());
 
     }
 
-    public static List<Apple> filterGreenApples(List<Apple> inventory) {
+    public static List<Apple> filterGreenApples(List<Apple> inventory, String color) {
         List<Apple> result = new ArrayList<>();
 
         for (Apple apple : inventory) {
-            if ("Green".equals(apple.getColor())) {
+            if (color.equals(apple.getColor())) {
                 result.add(apple);
             }
         }
