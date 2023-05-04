@@ -9,7 +9,12 @@ public class Main {
 
         linkedList.appEnd(2);
 
-        linkedList.displayLinkedList();
+
+        System.out.println(linkedList.removeLast().value);
+        System.out.println(linkedList.removeLast().value);
+        System.out.println(linkedList.removeLast());
+
+        //linkedList.displayLinkedList();
 
     }
 }
