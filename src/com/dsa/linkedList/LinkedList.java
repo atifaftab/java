@@ -15,7 +15,7 @@ public class LinkedList {
 
     }
 
-    LinkedList(int value) {
+    public LinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
