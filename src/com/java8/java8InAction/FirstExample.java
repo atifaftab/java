@@ -8,9 +8,9 @@ public class FirstExample {
 
         List<Apple> inventory = new ArrayList<>();
 
-        Apple apple = new Apple();
-        apple.setColor("Green");
-        apple.setWeight(154);
+        Apple apple = new Apple(80, "Green");
+//        apple.setColor("Green");
+//        apple.setWeight(154);
 
         inventory.add(apple);
 
