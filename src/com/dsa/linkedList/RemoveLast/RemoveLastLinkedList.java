@@ -51,22 +51,19 @@ public class RemoveLastLinkedList {
         if(length == 0){
             head = node;
             tail = node;
-            length++;
         }
         else{
             tail.next = node;
             tail = node;
         }
+        length++;
     }
 
     public Node removeLast() {
 
         Node temp = head;
-
         if (length == 0) return null;
-
         Node pre = head;
-
         while (temp.next != null) {
             pre = temp;
             temp = temp.next;
