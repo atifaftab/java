@@ -1,7 +1,5 @@
 package com.dsa.linkedList.append;
 
-import com.dsa.linkedList.LinkedList;
-
 public class Main {
     public static void main(String[] args) {
 

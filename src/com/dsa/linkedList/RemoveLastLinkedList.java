@@ -1,6 +1,6 @@
 package com.dsa.linkedList;
 
-public class LinkedList {
+public class RemoveLastLinkedList {
     private Node head;
     private Node tail;
     private int length;
@@ -15,7 +15,7 @@ public class LinkedList {
 
     }
 
-    public LinkedList(int value) {
+    public RemoveLastLinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;

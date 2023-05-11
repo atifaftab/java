@@ -1,16 +1,17 @@
 package com.dsa.linkedList.RemoveLast;
 
-import com.dsa.linkedList.LinkedList;
+import com.dsa.linkedList.RemoveLastLinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList myLinkedList = new LinkedList(4);
+        RemoveLastLinkedList myLinkedList = new RemoveLastLinkedList(1);
+        myLinkedList.append(2);
 
-        myLinkedList.getHead();
-        myLinkedList.getTail();
-        myLinkedList.getLength();
+//        myLinkedList.getHead();
+//        myLinkedList.getTail();
+//        myLinkedList.getLength();
 
         System.out.println("\nLinked List:");
         myLinkedList.printList();
