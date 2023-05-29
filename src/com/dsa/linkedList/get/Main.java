@@ -9,5 +9,7 @@ public class Main {
         linkedList.append(3);
 
         linkedList.displayLinkedList();
+
+        System.out.println("the required " + linkedList.get(2).data);
     }
 }
