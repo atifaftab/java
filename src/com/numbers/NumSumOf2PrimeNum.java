@@ -8,7 +8,7 @@ public class NumSumOf2PrimeNum {
         for (int i = 2; i <= num / 2; i++) {
             if (checkPrime(i)) {
                 if (checkPrime(num - i)) {
-                    System.out.println(num + " is sum of " + i + " and " + (num - i));
+                    System.out.println(num + " is sum of prime numbers " + i + " and " + (num - i));
 
                     flag = true;
                 }
@@ -21,13 +21,11 @@ public class NumSumOf2PrimeNum {
     }
 
     public static Boolean checkPrime(int num) {
-        boolean flag = true;
-        for (int i = 2; i <= num / 2; i++) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
-                flag = false;
-                break;
+                return false;
             }
         }
-        return flag;
+        return true;
     }
 }
