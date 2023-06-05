@@ -9,9 +9,6 @@ public class ConcurrentMultiThreading implements Runnable{
     private Phaser phaser;
     public String name;
 
-//    public setName(String name)
-
-
     ConcurrentMultiThreading(String name, Phaser phaser){
         this.phaser = phaser;
         phaser.register();
