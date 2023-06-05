@@ -1,4 +1,4 @@
-package com.collection.linkedList.practice3;
+package com.collections.linkedList.practice3;
 
 public class Main {
     public static void main(String[] args) {

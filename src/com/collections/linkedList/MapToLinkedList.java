@@ -1,5 +1,5 @@
 /*map to to LinkedList*/
-package com.collection.linkedList;
+package com.collections.linkedList;
 
 import java.util.HashMap;
 import java.util.LinkedList;
