@@ -46,7 +46,7 @@ public class RemoveLastLinkedList {
 
     public void appEnd(int value){
         Node node = new Node(value);
-        Node temp = head;
+//        Node temp = head;
 
         if(length == 0){
             head = node;

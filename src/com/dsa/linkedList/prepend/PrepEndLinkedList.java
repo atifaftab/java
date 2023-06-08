@@ -30,7 +30,7 @@ public class PrepEndLinkedList {
         }
     }
 
-    public Node removeNode() {
+    public Node removeNodeLast() {
         if (length == 0) return null;
         Node temp = head;
         Node pre = head;

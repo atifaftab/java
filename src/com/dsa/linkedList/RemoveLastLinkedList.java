@@ -54,4 +54,19 @@ public class RemoveLastLinkedList {
         }
         length++;
     }
+
+    public void prepend(int value){
+        Node node = new Node(value);
+        if(length == 0){
+            head = node;
+            tail = node;
+        }
+        else {
+            node.next = head;
+            head = node;
+        }
+
+    }
+
+
 }
