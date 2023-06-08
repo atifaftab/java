@@ -2,8 +2,6 @@ package com.arrays;
 
 import java.util.Arrays;
 
-import static java.lang.Integer.parseInt;
-
 public class MissingNoInArray {
     public static void main(String[] args) {
         int[] arr = {1,5,3,2};
