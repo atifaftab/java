@@ -72,7 +72,5 @@ public class PrepEndLinkedList {
             head = newNode;
         }
         length++;
-
-
     }
 }
