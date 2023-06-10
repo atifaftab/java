@@ -2,6 +2,7 @@ package com.collections.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SimpleSort {
@@ -14,7 +15,12 @@ public class SimpleSort {
         list.add(4);
         list.add(0);
 
-        Collections.sort(list);
+        // 1st way
+//        Collections.sort(list);
+
+        //using comparator
+        list.sort(Comparator.naturalOrder());
         System.out.println(list);
+
     }
 }
