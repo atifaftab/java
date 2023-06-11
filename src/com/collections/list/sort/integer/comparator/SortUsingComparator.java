@@ -24,8 +24,13 @@ public class SortUsingComparator {
         list.add(4);
         list.add(0);
 
-        Collections.sort(list, com);
+//        1st way
+//        Collections.sort(list, com);
+
+        //2nd way
+        list.sort(com);
         System.out.println(list);
+
     }
 
 }
