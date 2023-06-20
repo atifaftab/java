@@ -48,7 +48,6 @@ public class PrepEndLinkedList {
         }
         return temp;
     }
-
     public void append(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -59,9 +58,7 @@ public class PrepEndLinkedList {
             tail = newNode;
         }
         length++;
-
     }
-
     public void prepEnd(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
