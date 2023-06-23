@@ -1,6 +1,4 @@
-package com.collection.linkedList.internal2;
-
-import com.collection.linkedList.Internal.LinkedListInternal;
+package com.collections.linkedList.internal2;
 
 public class Main {
     public static void main(String[] args) {

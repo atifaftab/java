@@ -1,4 +1,4 @@
-package com.collection.linkedList.Internal;
+package com.collections.linkedList.internal2;
 
 public class Node {
     int data;

@@ -6,7 +6,7 @@ public class MainDriver {
 
         PrepEndLinkedList myLinkedList = new PrepEndLinkedList(1);
         myLinkedList.append(2);
-        myLinkedList.removeNode();
+        myLinkedList.removeNodeLast();
 
         System.out.println("\nLinked List:");
         myLinkedList.displayLinkedList();

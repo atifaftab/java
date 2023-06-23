@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class RepeatingNumber {
     public static void main(String[] args) {
-        int[] arrNum = new int[]{1, 2, 3, 1,};
+        int[] arrNum = new int[]{1, 2, 3, 1, 2};
         System.out.println("repeating number(s) ");
 //        for (int i = 0; i < arrNum.length; i++) {
 //            for (int j = i + 1; j < arrNum.length; j++) {
@@ -16,11 +16,10 @@ public class RepeatingNumber {
 
         HashSet<Integer> uniqueNumbers = new HashSet<>();
         Boolean flag = false;
-        for (int i = 0; i<arrNum.length; i++){
-            if(uniqueNumbers.contains(arrNum[i])){
+        for (int i = 0; i < arrNum.length; i++) {
+            if (uniqueNumbers.contains(arrNum[i])) {
                 System.out.println(arrNum[i]);
-            }
-            else uniqueNumbers.add(arrNum[i]);
+            } else uniqueNumbers.add(arrNum[i]);
         }
 
     }

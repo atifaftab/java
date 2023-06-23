@@ -8,7 +8,7 @@ public class RecursionDemo {
 
     }
     static void recursionMethod(int num){
-        if(num==0)
+        if(num<=0)
             return;
         System.out.println(num);
         recursionMethod(num-1);

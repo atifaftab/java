@@ -1,4 +1,4 @@
-package com.collection.linkedList.Internal;
+package com.collections.linkedList.Internal;
 
 public class Driver {
     public static void main(String[] args){

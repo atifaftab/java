@@ -54,6 +54,7 @@ public final class ImmutableClassDemo {
 
         HashMap<Integer,String> newMap =  immutableObj.getMapping();
         newMap.put(99,"Kings");
+        System.out.println("trying to modify the hashmap");
 
         System.out.println(immutableObj.mapping);
         

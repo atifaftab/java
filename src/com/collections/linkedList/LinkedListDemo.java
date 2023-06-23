@@ -1,5 +1,5 @@
 /*demo for linkedlist with multiple data type*/
-package com.collection.linkedList;
+package com.collections.linkedList;
 
 import java.util.LinkedList;
 

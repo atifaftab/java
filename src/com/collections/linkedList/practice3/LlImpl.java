@@ -1,6 +1,6 @@
-package com.collection.linkedList.internal2;
+package com.collections.linkedList.practice3;
 
-public class LinkedListImplementation {
+public class LlImpl {
 
     Node head;
 
@@ -28,8 +28,7 @@ public class LinkedListImplementation {
         }
     }
 
-    void insertStart(int data) {
-
+    void insertAtStart(int data) {
         Node node = new Node();
         node.data = data;
         node.next = head;
@@ -40,31 +39,17 @@ public class LinkedListImplementation {
         Node node = new Node();
         node.data = data;
         node.next = null;
+        Node n1 = null;
 
-        if (index == 0) {
-            insertStart(data);
+        if (head == null) {
+            head = node;
         } else {
             Node n = head;
             for (int i = 0; i < index - 1; i++) {
                 n = n.next;
             }
-            node.next = n.next;
-            n.next = node;
+
         }
     }
 
-    void deleteAtIndex(int index) {
-        Node n = head;
-        Node n1 = null;
-        if (index == 0) {
-            head = head.next;
-        } else {
-
-            for (int i = 0; i < index - 1; i++) {
-                n = n.next;
-            }
-            n1 = n.next;
-            n.next = n1.next;
-        }
-    }
 }
