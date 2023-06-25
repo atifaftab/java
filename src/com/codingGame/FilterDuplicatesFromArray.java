@@ -24,5 +24,7 @@ public class FilterDuplicatesFromArray {
 //        System.out.println(list);
         return list.stream().mapToInt(Integer::intValue).toArray();
 
+        //using th eold java way
+
     }
 }
