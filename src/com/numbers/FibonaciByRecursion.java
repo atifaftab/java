@@ -3,7 +3,7 @@ package com.numbers;
 public class FibonaciByRecursion {
     public static void main(String[] args) {
 
-        int num = 1;
+        int num = 10;
         System.out.println(fibonaci(num));
     }
 
