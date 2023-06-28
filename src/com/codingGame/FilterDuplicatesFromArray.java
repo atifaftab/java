@@ -13,19 +13,37 @@ public class FilterDuplicatesFromArray {
 
     public static int[] filterDuplicates(int[] arr) {
 
-        Set<Integer> unique = new HashSet<>();
-        List<Integer> list = new ArrayList<>();
-
-        for (int n : arr) {
-            if (!unique.add(n)) {
-                list.add(n);
-            }
-        }
-//        System.out.println(list);
-        return list.stream().mapToInt(Integer::intValue).toArray();
+//        Set<Integer> unique = new HashSet<>();
+//        List<Integer> list = new ArrayList<>();
+//
+//        for (int n : arr) {
+//            if (!unique.add(n)) {
+//                list.add(n);
+//            }
+//        }
+////        System.out.println(list);
+//        return list.stream().mapToInt(Integer::intValue).toArray();
 
         //using the old java way
+//        int[] a = new int[arr.length];
+//        for(int i = 0; i<= arr.length;i++){
+//            for(int j = i+1; j< arr.length-1;j++){
+//                if(arr[i] != arr[j]){
+//                    a[i] = arr[j];
+//                }
+//            }
+//        }
+//        return a;
 
+
+
+        //using linkedHashset
+        LinkedHashSet<Integer> unique = new LinkedHashSet<>();
+
+        for(Integer n : arr){
+            unique.add(n);
+        }
+        return unique.stream().mapToInt(Integer::intValue).toArray();
 
     }
 }
