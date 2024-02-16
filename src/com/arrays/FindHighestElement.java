@@ -8,10 +8,10 @@ public class FindHighestElement {
         int main = arr[0];
 //        for (int i = 0; i < arr.length; i++) {
         for (int i : arr) {
-//            if (i > max) {
-//                max = i;
-//            }
-            max = Math.max(max, i);
+            if (i > max) {
+                max = i;
+            }
+//            max = Math.max(max, i);
             if (main < max) {
                 main = Math.max(main, i);
 //                System.out.println("main = " + main);
