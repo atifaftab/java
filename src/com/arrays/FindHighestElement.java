@@ -4,20 +4,25 @@ public class FindHighestElement {
     public static void main(String[] args) {
 
         int[] arr = new int[]{20, 4, 35, 1, 87, 7, 8, 9, 81, -85451};
-        int max = -1;
-        int main = -1;
+        int max =arr[0];
+        int main = arr[0];
 //        for (int i = 0; i < arr.length; i++) {
         for (int i : arr) {
-            if (i > max) {
-                max = i;
-            }
+//            if (i > max) {
+//                max = i;
+//            }
+            max = Math.max(max, i);
             if (main < max) {
                 main = Math.max(main, i);
 //                System.out.println("main = " + main);
             }
         }
-//        System.out.println("max = " + max);
+        System.out.println("max = " + max);
 //        System.out.println("main = " + main);
+
+
+
+
         int smax = Integer.MIN_VALUE;
         int m = Integer.MIN_VALUE;
              
