@@ -4,12 +4,22 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
 //returns duplicates elements from array
 public class FindDuplicates {
 
     public static void main(String[] args) {
 
         int[] arr = new int[]{2, 54, 86, 2, 9, 5, 1, 1};
+        //using brute force with nested loop
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j])
+                    System.out.println("Duplicate = " + arr[i]);
+            }
+        }
+
+
         Set<Integer> unique = new LinkedHashSet<>();
         List<Integer> duplicates = new ArrayList<>();
 
