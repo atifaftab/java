@@ -14,7 +14,7 @@ public class LargestNumber {
 //        }
 //        System.out.println(max);
 
-        //my way
+        //using sort
 //        Arrays.stream(num).sorted();
 //        System.out.println(num[num.length-1]);
 
