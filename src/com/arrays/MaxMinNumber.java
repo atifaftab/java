@@ -14,5 +14,15 @@ public class MaxMinNumber {
 
         System.out.println("max : " + max);
         System.out.println("min : " + min);
+
+
+        System.out.println("---------");
+        for (int e : arrNum) {
+            max = Math.max(max, e);
+            min = Math.min(min, e);
+        }
+
+        System.out.println("max : " + max);
+        System.out.println("min : " + min);
     }
 }
