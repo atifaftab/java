@@ -1,5 +1,7 @@
 package com.arrays;
 
+import java.util.Arrays;
+
 public class FindHighestElement {
     public static void main(String[] args) {
 
@@ -21,6 +23,7 @@ public class FindHighestElement {
 //        System.out.println("main = " + main);
 
 
+        System.out.println(Arrays.stream(arr).max().getAsInt());
 
 
         int smax = Integer.MIN_VALUE;
