@@ -19,5 +19,18 @@ public class OddBeforeEven {
             }
         }
         System.out.println(Arrays.toString(copyArr));
+
+        int[] carr = new int[numbers.length];
+        int x = 0;
+        int y = numbers.length - 1;
+        for (int i : numbers) {
+            if (i % 2 != 0) {
+                carr[x++] = i;
+                continue;
+            }
+            carr[y--] = i;
+        }
+        System.out.println(Arrays.toString(carr));
+
     }
 }
