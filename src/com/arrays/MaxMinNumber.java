@@ -2,7 +2,7 @@ package com.arrays;
 
 public class MaxMinNumber {
     public static void main(String[] args) {
-
+        // find maximum and minimum number
         int[] arrNum = new int[]{2, 4, 6, -3, 5};
         int max = arrNum[0];
         int min = arrNum[0];
