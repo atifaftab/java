@@ -3,6 +3,7 @@ package com.arrays;
 import java.util.Arrays;
 
 public class OddBeforeEven {
+    //put odd numbers before even numbers
     public static void main(String[] args) {
         int[] numbers = new int[]{1, 2, 4, 5, 7, 9, -2, 3};
 
