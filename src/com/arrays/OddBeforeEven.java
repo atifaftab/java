@@ -1,6 +1,8 @@
 package com.arrays;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class OddBeforeEven {
     //put odd numbers before even numbers
@@ -31,6 +33,15 @@ public class OddBeforeEven {
             carr[y--] = i;
         }
         System.out.println(Arrays.toString(carr));
+
+        //using stream
+
+        Object[] newArray = Stream.of(IntStream.of(numbers).filter(i -> i % 2 != 0).boxed().toArray(),
+                        IntStream.of(numbers).filter(i -> i % 2 == 0).boxed().toArray())
+                .flatMap(Arrays::stream)
+                .toArray();
+
+        System.out.println(Arrays.toString(newArray));
 
     }
 }
