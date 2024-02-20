@@ -13,7 +13,6 @@ public class NIntegersArrays {
         for (int i = 0; i < arrInt.length; i++) {
             arrInt[i] = in.nextInt();
         }
-
         System.out.println("The entered :  " + Arrays.toString(arrInt));
 
 
