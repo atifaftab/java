@@ -16,13 +16,15 @@ public class RemoveByValue {
 
         System.out.println(map);
 
-        Iterator<Map.Entry<String ,String >> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()){
-            Map.Entry<String, String> entry = iterator.next();
-            if(value.equals(entry.getValue())){
-                iterator.remove();
-            }
-        }
+//        Iterator<Map.Entry<String ,String >> iterator = map.entrySet().iterator();
+//        while (iterator.hasNext()){
+//            Map.Entry<String, String> entry = iterator.next();
+//            if(value.equals(entry.getValue())){
+//                iterator.remove();
+//            }
+//        }
+
+        map.entrySet().removeIf(entry -> value.equals(entry.getValue()));
         System.out.println(map);
     }
 
