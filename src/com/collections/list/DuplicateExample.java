@@ -1,9 +1,6 @@
 package com.collections.list;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -31,6 +28,17 @@ public class DuplicateExample {
                 .map(Map.Entry::getKey)
                 .toList();
         System.out.println("list1 = " + list1);
+
+
+        List<Integer> duplicates = list.stream()
+                .collect(Collectors.groupingBy(i -> i))
+                .entrySet().stream()
+                .filter(entry -> entry.getValue().size() > 1)
+//                .map(entry -> entry.getKey())
+                .map(Map.Entry::getKey)
+                .toList();
+
+        System.out.println("Duplicates: " + duplicates);
     }
 
 }
