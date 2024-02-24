@@ -19,6 +19,7 @@ public class DuplicateExample {
         }
         System.out.println(unique);
 
+        //Gemini
         List<Integer> list1 = list.stream()
 //                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
@@ -29,7 +30,7 @@ public class DuplicateExample {
                 .toList();
         System.out.println("list1 = " + list1);
 
-
+        //chatGpt
         List<Integer> duplicates = list.stream()
                 .collect(Collectors.groupingBy(i -> i))
                 .entrySet().stream()
