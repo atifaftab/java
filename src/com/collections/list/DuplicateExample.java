@@ -40,6 +40,10 @@ public class DuplicateExample {
                 .toList();
 
         System.out.println("Duplicates: " + duplicates);
+
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> dupsSet = list.stream().filter(n -> !set1.add(n)).collect(Collectors.toSet());
+        System.out.println("dupsSet = " + dupsSet);
     }
 
 }
