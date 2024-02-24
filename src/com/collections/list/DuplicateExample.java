@@ -23,6 +23,7 @@ public class DuplicateExample {
         System.out.println(unique);
 
         List<Integer> list1 = list.stream()
+//                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet()
                 .stream()
