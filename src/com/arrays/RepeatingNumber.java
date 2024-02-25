@@ -16,10 +16,17 @@ public class RepeatingNumber {
 
         HashSet<Integer> uniqueNumbers = new HashSet<>();
         Boolean flag = false;
-        for (int i = 0; i < arrNum.length; i++) {
-            if (uniqueNumbers.contains(arrNum[i])) {
-                System.out.println(arrNum[i]);
-            } else uniqueNumbers.add(arrNum[i]);
+
+//        for (int i = 0; i < arrNum.length; i++) {
+//            if (uniqueNumbers.contains(arrNum[i])) {
+//                System.out.println(arrNum[i]);
+//            } else uniqueNumbers.add(arrNum[i]);
+//        }
+
+        for (int j : arrNum) {
+            if (uniqueNumbers.contains(j)) {
+                System.out.println(j);
+            } else uniqueNumbers.add(j);
         }
 
     }
