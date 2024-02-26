@@ -26,14 +26,23 @@ public class ReverseArray {
             numbers[k] = temp;
             k--;
         }*/
-        int k = numbers.length - 1;
-        for (int i = 0; i < numbers.length / 2; i++) {
-            int temp = numbers[i];
-            numbers[i] = numbers[k];
-            numbers[k] = temp;
-            k--;
-        }
-        System.out.println(Arrays.toString(numbers));
+//        int k = numbers.length - 1;
+//        for (int i = 0; i < numbers.length / 2; i++) {
+//            int temp = numbers[i];
+//            numbers[i] = numbers[k];
+//            numbers[k] = temp;
+//            k--;
+//        }
+//        System.out.println(Arrays.toString(numbers));
+
+//        System.out.println("------");
+//
+//        for (int i = 0; i < numbers.length / 2; i++) {
+//            int temp = numbers[i];
+//            numbers[i] = numbers[numbers.length - i - 1];
+//            numbers[numbers.length - i - 1] = temp;
+//        }
+//        System.out.println(Arrays.toString(numbers));
 
         //  2nd solution  another way
 
