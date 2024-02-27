@@ -37,4 +37,8 @@ public class LinkedListExample {
     public void printTail() {
         System.out.println("tail = " + tail.value);
     }
+
+    public void getLength() {
+        System.out.println("length = " + length);
+    }
 }
