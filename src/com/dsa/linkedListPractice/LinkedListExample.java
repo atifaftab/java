@@ -2,8 +2,9 @@ package com.dsa.linkedListPractice;
 
 public class LinkedListExample {
 
-    Node tail;
-    Node head;
+    private Node tail;
+    private Node head;
+    private int length;
 
     static class Node {
         int value;
@@ -14,6 +15,13 @@ public class LinkedListExample {
         }
     }
 
+    public LinkedListExample(int value) {
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        length = 1;
+    }
+
     public void printLinkedList() {
         Node temp = head;
         while (temp != null) {
@@ -21,7 +29,12 @@ public class LinkedListExample {
             temp = temp.next;
         }
     }
-    public void printHead(){
 
+    public void printHead() {
+        System.out.println("head = " + head.value);
+    }
+
+    public void printTail() {
+        System.out.println("tail = " + tail.value);
     }
 }
