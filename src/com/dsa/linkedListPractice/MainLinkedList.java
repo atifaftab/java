@@ -7,6 +7,7 @@ public class MainLinkedList {
         linkedListExample.printLinkedList();
         linkedListExample.printHead();
         linkedListExample.printTail();
+        linkedListExample.getLength();
     }
 
 }
