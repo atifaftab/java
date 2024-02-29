@@ -19,5 +19,6 @@ public class RemoveDuplicate {
 
         //using distinct
         System.out.println(l1.stream().distinct().toList());
+
     }
 }
