@@ -41,9 +41,12 @@ public class DuplicateExample {
 
         System.out.println("Duplicates: " + duplicates);
 
-        Set<Integer> set1 = new HashSet<>();
-        Set<Integer> dupsSet = list.stream().filter(n -> !set1.add(n)).collect(Collectors.toSet());
-        System.out.println("dupsSet = " + dupsSet);
+//        Set<Integer> set1 = new HashSet<>();
+//        Set<Integer> dupsSet = list.stream().filter(n -> !set1.add(n)).collect(Collectors.toSet());
+//        System.out.println("dupsSet = " + dupsSet);
+        Set<Integer> set2 = new HashSet<>();
+        Set<Integer> dubSet = list.stream().filter(n ->!set2.add(n)).collect(Collectors.toSet());
+        System.out.println("dubSet = " + dubSet);
     }
 
 }
