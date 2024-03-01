@@ -12,5 +12,12 @@ public class Print2D {
                 System.out.print(mat[i][j] + " ");
             }
         }
+        System.out.println("--------");
+        //using foreach
+        for (int[] i : mat) {
+            for (int j : i) {
+                System.out.print(j + " ");
+            }
+        }
     }
 }
