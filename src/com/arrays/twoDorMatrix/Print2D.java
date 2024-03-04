@@ -12,7 +12,7 @@ public class Print2D {
                 System.out.print(mat[i][j] + " ");
             }
         }
-        System.out.println("--------");
+        System.out.println("\n--------");
         //using foreach
         for (int[] i : mat) {
             for (int j : i) {
@@ -24,5 +24,9 @@ public class Print2D {
         for (int[] arr : mat) {
             System.out.println(Arrays.toString(arr));
         }
+        System.out.println("\n--------");
+
+//        Arrays.deepToString(int[][]) converts  2D array to string in a single step.
+        System.out.println(Arrays.deepToString(mat));
     }
 }
