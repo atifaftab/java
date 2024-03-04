@@ -19,5 +19,7 @@ public class Print2D {
                 System.out.print(j + " ");
             }
         }
+        System.out.println("--------");
+
     }
 }
