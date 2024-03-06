@@ -28,5 +28,10 @@ public class CopyArray {
         //Arrays.copyOf(), Arrays.copyOf(original Array, length of new array)
         int[] copyArr3 = Arrays.copyOf(arr, arr.length);
         System.out.println(Arrays.toString(copyArr3));
+
+        //Arrays.copyOfRange(), Arrays.copyOfRange(original Array, from, to)
+        int[] copyArr4 = Arrays.copyOfRange(arr, 0, arr.length);
+        System.out.println(Arrays.toString(copyArr4));
+
     }
 }
