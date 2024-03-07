@@ -1,19 +1,28 @@
 package com.arrays;
 
 import java.util.Arrays;
+import java.util.Map;
 
 public class FindHighestElement {
     public static void main(String[] args) {
 
-        int[] arr = new int[]{20, 4, 35, 1, 87, 7, 8, 9, 81, -85451};
+        int[] arr = new int[]{20, 3424, 35, 1, 87, 7, 8, 9, 81, -85451, 347};
         int max = arr[0];
-        int main = arr[0];
+//        int main = arr[0];
         for (int i : arr) {
             if (i > max) {
                 max = i;
             }
         }
         System.out.println("max = " + max);
+
+        //using Math.max
+        int max2 = arr[0];
+        for (int n : arr) {
+            max2 = Math.max(n, max2);
+        }
+        System.out.println("max2 = " + max2);
+
         System.out.println(Arrays.stream(arr).max().getAsInt());
 
 
