@@ -24,5 +24,7 @@ public class FindSecondLargest {
         System.out.println("largest " + arr[arr.length - 1]);
         System.out.println("2nd largest " + arr[arr.length - 2]);
 
+        //
+
     }
 }
