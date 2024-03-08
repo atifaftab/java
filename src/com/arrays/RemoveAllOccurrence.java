@@ -1,8 +1,6 @@
 package com.arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class RemoveAllOccurrence {
     public static void main(String[] args) {
@@ -19,5 +17,13 @@ public class RemoveAllOccurrence {
             }
         }
         System.out.println(list);
+
+
+        Integer[] arr1 = {3, 9, 2, 3, 1, 7, 2, 3, 5};
+        List<Integer> list1 = Arrays.asList(arr1);
+        List<Integer> finalList = list1.stream().filter(i -> i != num).toList();
+//        Arrays.stream(arr).filter(i -> i!=num).collect()
+//        finalList.forEach(System.out::println);
+        System.out.println("finalList = " + finalList);
     }
 }
