@@ -24,7 +24,32 @@ public class FindSecondLargest {
         System.out.println("largest " + arr[arr.length - 1]);
         System.out.println("2nd largest " + arr[arr.length - 2]);
 
-        //
+        //by using 1 loop
+        int i, first, second;
+        first = second = Integer.MIN_VALUE;
+        if (arr.length < 2) {
+            System.out.println("Invalid ");
+            return;
+        }
+//        for (i = 0; i < arr.length; i++) {
+//            if (arr[i] > first) {
+//                second = first;
+//                first = arr[i];
+//            } else if (arr[i] > second && arr[i] != first) {
+//                second = arr[i];
+//            }
+//        }
+
+        for (int n : arr) {
+            if (n > first) {
+                second = first;
+                first = n;
+            } else if (n > second && n != first) {
+                second = n;
+            }
+        }
+        System.out.println("first " + first);
+        System.out.println("second " + second);
 
     }
 }
