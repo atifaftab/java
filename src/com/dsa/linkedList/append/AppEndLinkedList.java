@@ -31,21 +31,6 @@ public class AppEndLinkedList {
             temp = temp.next;
         }
     }
-
-
-    public void appEnd(int value) {
-        Node newNode = new Node(value);
-
-        if (length == 0) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            tail.next = newNode;
-            tail = newNode;
-        }
-        length++;
-    }
-
     public Node removeLast() {
         if (length == 0) return null;
 
@@ -63,5 +48,29 @@ public class AppEndLinkedList {
             tail = null;
         }
         return temp;
+    }
+
+    public void appEnd(int value) {
+        Node newNode = new Node(value);
+
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length++;
+    }
+    public void appEnd1(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        } else {
+            tail.next = node;
+            tail = node;
+        }
+        length++;
     }
 }
