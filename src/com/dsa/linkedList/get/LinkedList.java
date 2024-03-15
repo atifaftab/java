@@ -8,12 +8,13 @@ public class LinkedList {
     class Node {
         int data;
         Node next;
-        Node(int value){
+
+        Node(int value) {
             this.data = value;
         }
     }
 
-    LinkedList(int value){
+    LinkedList(int value) {
         Node node = new Node(value);
         this.head = node;
         this.tail = node;
@@ -21,32 +22,40 @@ public class LinkedList {
 
     }
 
-    void displayLinkedList(){
+    void displayLinkedList() {
         Node temp = head;
-        while(temp != null){
+        while (temp != null) {
             System.out.println(temp.data);
             temp = temp.next;
         }
     }
 
-    void append(int value){
+    void append(int value) {
         Node node = new Node(value);
 
-        if(length == 0){
+        if (length == 0) {
             head = node;
             tail = node;
-        }
-        else {
+        } else {
             tail.next = node;
             tail = node;
         }
         length++;
     }
 
-    Node get(int index){
-        if(index<0 || index > length) return null;
+    Node get(int index) {
+        if (index < 0 || index > length) return null;
         Node temp = head;
-        for(int i=0; i<index; i++){
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    public Node get1(int index) {
+        if (index < 0 || index > length) return null;
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
         return temp;
