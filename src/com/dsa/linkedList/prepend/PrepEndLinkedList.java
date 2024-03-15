@@ -70,4 +70,17 @@ public class PrepEndLinkedList {
         }
         length++;
     }
+
+
+    public void prepEnd1(int value){
+        Node node = new Node(value);
+        if(length == 0){
+            head = node;
+            tail = node;
+        }else{
+            node.next = head;
+            head = node;
+        }
+        length++;
+    }
 }
