@@ -41,7 +41,7 @@ public class LinkedListLastRemoved {
         System.out.println("length = " + length);
     }
 
-    public Node appEnd(int value) {
+    public void appEnd(int value) {
         Node node = new Node(value);
         if (length == 0) {
             head = node;
@@ -51,6 +51,25 @@ public class LinkedListLastRemoved {
             tail = node;
         }
         length++;
-        return node;
+    }
+
+    public Node removeLast() {
+        if (length == 0)
+            return null;
+        Node temp = head;
+        Node pre = temp;
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
+        }
+//            pre.next = null;
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
     }
 }
