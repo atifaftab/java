@@ -84,9 +84,9 @@ public class Linkedlist {
 
     public Node get(int index) {
         if (length == 0) return null;
-        if(index<0 || index>length) return null;
+        if (index < 0 || index > length) return null;
         Node temp = head;
-        for (int i =0; i< index; i++){
+        for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
         return temp;
@@ -102,6 +102,16 @@ public class Linkedlist {
         }
         temp.value = value;
         return true;
+    }
+
+    //using get
+    public boolean setUsingGet(int index, int value) {
+        Node temp = get(index);
+        if (temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
     }
 
 }
