@@ -82,4 +82,15 @@ public class Linkedlist {
         return temp;
     }
 
+    public boolean set1(int index, int value){
+        if(length == 0) return  false;
+        if (index<0 || index > length) return false;
+        Node temp = head;
+        for(int i=0; i< index; i++){
+            temp = temp.next;
+        }
+        temp.value =value;
+        return true;
+    }
+
 }
