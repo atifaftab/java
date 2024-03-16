@@ -7,7 +7,7 @@ public class Main {
         linkedlist.append(2);
         linkedlist.append(3);
 
-        linkedlist.set(9, 3);
+        System.out.println(linkedlist.set1(1, 3));
 
         linkedlist.printLinkedList();
     }
