@@ -63,33 +63,44 @@ public class Linkedlist {
         return temp;
     }
 
-    Node removeLast(){
-        if(length == 0) return null;
+    Node removeLast() {
+        if (length == 0) return null;
 
         Node temp = head;
         Node pre = head;
-        while(temp.next != null){
+        while (temp.next != null) {
             pre = temp;
-            temp =temp.next;
+            temp = temp.next;
         }
         tail = pre;
         pre.next = null;
         length--;
-        if(length == 0) {
+        if (length == 0) {
             head = null;
             tail = null;
         }
         return temp;
     }
 
-    public boolean set1(int index, int value){
-        if(length == 0) return  false;
-        if (index<0 || index > length) return false;
+    public Node get(int index) {
+        if (length == 0) return null;
+        if(index<0 || index>length) return null;
         Node temp = head;
-        for(int i=0; i< index; i++){
+        for (int i =0; i< index; i++){
             temp = temp.next;
         }
-        temp.value =value;
+        return temp;
+    }
+
+    //basic method
+    public boolean set1(int index, int value) {
+        if (length == 0) return false;
+        if (index < 0 || index > length) return false;
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        temp.value = value;
         return true;
     }
 
