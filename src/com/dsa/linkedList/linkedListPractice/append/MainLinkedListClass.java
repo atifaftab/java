@@ -1,4 +1,4 @@
-package com.dsa.linkedListPractice.append;
+package com.dsa.linkedList.linkedListPractice.append;
 
 public class MainLinkedListClass {
     public static void main(String[] args) {

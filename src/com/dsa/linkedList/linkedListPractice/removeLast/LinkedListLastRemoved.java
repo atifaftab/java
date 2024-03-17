@@ -1,4 +1,4 @@
-package com.dsa.linkedListPractice.removeLast;
+package com.dsa.linkedList.linkedListPractice.removeLast;
 
 public class LinkedListLastRemoved {
     private Node head;

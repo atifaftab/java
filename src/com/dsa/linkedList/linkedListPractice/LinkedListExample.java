@@ -1,11 +1,12 @@
-package com.dsa.linkedListPractice.append;
+package com.dsa.linkedList.linkedListPractice;
 
 public class LinkedListExample {
-    private Node head;
+
     private Node tail;
+    private Node head;
     private int length;
 
-    class Node {
+    static class Node {
         int value;
         Node next;
 
@@ -39,17 +40,5 @@ public class LinkedListExample {
 
     public void getLength() {
         System.out.println("length = " + length);
-    }
-
-    public void appEnd(int value) {
-        Node node = new Node(value);
-        if (length == 0) {
-            head = node;
-            tail = node;
-        } else {
-            tail.next = node;
-            tail = node;
-        }
-        length++;
     }
 }
