@@ -5,7 +5,7 @@ public class Main {
         Person person = Person.builder()
                 .name("Atif")
                 .age(28)
-                .address(new Address("add"))
+                .address(new Address("32"))
                 .build();
         System.out.println("person = " + person);
     }
