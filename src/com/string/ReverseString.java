@@ -30,5 +30,19 @@ public class ReverseString {
         System.out.println(stringBuilder.reverse());
 
 
+        String str = "word";
+
+        String reverse ="";
+
+        System.out.println(str);
+
+        for(int i=0; i<str.length();i++){
+
+            reverse = str.charAt(i) + reverse;
+
+        }
+
+        System.out.println(reverse);
+
     }
 }
