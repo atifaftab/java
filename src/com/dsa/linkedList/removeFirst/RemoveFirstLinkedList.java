@@ -29,15 +29,26 @@ public class RemoveFirstLinkedList {
         }
     }
 
-    public void preEnd(int value) {
+    public void prepEnd(int value) {
         Node node = new Node(value);
         if (length == 0) {
             head = node;
             tail = node;
         } else {
-            head.next = node;
+            node.next = head;
             head = node;
         }
         length++;
+    }
+
+    public void appEnd(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        } else {
+            tail.next = node;
+            tail = node;
+        }
     }
 }
