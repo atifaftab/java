@@ -21,7 +21,9 @@ public class RemoveFirstMain {
         removeFirstLinkedList.getLength();
         System.out.println("---removing first -------");
         System.out.println("removed element : " + removeFirstLinkedList.removeFirst().value);
-        removeFirstLinkedList.printLinkedList();
+        System.out.println("removed element : " + removeFirstLinkedList.removeFirst().value);
+        System.out.println("removed element : " + removeFirstLinkedList.removeFirst().value);
+        System.out.println("removed element : " + removeFirstLinkedList.removeFirst());
         removeFirstLinkedList.getLength();
     }
 }
