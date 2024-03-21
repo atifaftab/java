@@ -9,7 +9,7 @@ public class GetSumOfNumbers {
           For example, s="12 some text 3  7", result: 22 (12+3+7=22)
          */
         String s = "12 some text 3  7";
-        getSumOfNumbers(s);
+        getSumOfNumber(s);
 
     }
 
@@ -26,5 +26,17 @@ public class GetSumOfNumbers {
         }
         if (!temp.isEmpty()) sum += Integer.parseInt(temp);
         System.out.println("sum = " + sum);
+    }
+
+    public static void getSumOfNumber(String s) {
+        int sum = 0;
+        for (String str : s.split("\\s")) {
+            try {
+                sum += Integer.parseInt(str);
+            } catch (NumberFormatException e) {
+                //e.printStackTrace();
+            }
+        }
+        System.out.println(sum);
     }
 }
