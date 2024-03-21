@@ -40,7 +40,7 @@ public class PrepEndLinkedList {
             temp = temp.next;
         }
         tail = pre;
-        pre.next = null;
+        tail.next = null;
         length--;
         if (length == 0) {
             head = null;
@@ -48,6 +48,7 @@ public class PrepEndLinkedList {
         }
         return temp;
     }
+
     public void append(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -59,6 +60,7 @@ public class PrepEndLinkedList {
         }
         length++;
     }
+
     public void prepEnd(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -72,12 +74,12 @@ public class PrepEndLinkedList {
     }
 
 
-    public void prepEnd1(int value){
+    public void prepEnd1(int value) {
         Node node = new Node(value);
-        if(length == 0){
+        if (length == 0) {
             head = node;
             tail = node;
-        }else{
+        } else {
             node.next = head;
             head = node;
         }
