@@ -7,13 +7,13 @@ public class RemoveFirstMain {
         removeFirstLinkedList.prepEnd(1);
         removeFirstLinkedList.appEnd(4);
         removeFirstLinkedList.appEnd(5);
-
         removeFirstLinkedList.printLinkedList();
         System.out.println("length : " + removeFirstLinkedList.getLength());
+
         System.out.println("------after removing last element ------");
-        removeFirstLinkedList.removeLast();
-        removeFirstLinkedList.removeLast();
-        removeFirstLinkedList.printLinkedList();
+
+        System.out.println(removeFirstLinkedList.removeLast().value);
+        System.out.println(removeFirstLinkedList.removeLast().value);
         System.out.println("length : " + removeFirstLinkedList.getLength());
 
 
