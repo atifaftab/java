@@ -8,14 +8,20 @@ public class RemoveFirstMain {
         removeFirstLinkedList.appEnd(4);
         removeFirstLinkedList.appEnd(5);
         removeFirstLinkedList.printLinkedList();
-        System.out.println("length : " + removeFirstLinkedList.getLength());
+        removeFirstLinkedList.getLength();
 
         System.out.println("------after removing last element ------");
 
-        System.out.println(removeFirstLinkedList.removeLast().value);
-        System.out.println(removeFirstLinkedList.removeLast().value);
-        System.out.println("length : " + removeFirstLinkedList.getLength());
+        System.out.println("removed element : " + removeFirstLinkedList.removeLast().value);
+        System.out.println("removed element : " + removeFirstLinkedList.removeLast().value);
+        removeFirstLinkedList.getLength();
 
-
+        System.out.println("------ rest of the element ------");
+        removeFirstLinkedList.printLinkedList();
+        removeFirstLinkedList.getLength();
+        System.out.println("---removing first -------");
+        System.out.println("removed element : " + removeFirstLinkedList.removeFirst().value);
+        removeFirstLinkedList.printLinkedList();
+        removeFirstLinkedList.getLength();
     }
 }
