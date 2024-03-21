@@ -30,7 +30,7 @@ public class RemoveFirstLinkedList {
     }
 
     public void getLength() {
-        System.out.println("length : "+length);
+        System.out.println("length : " + length);
     }
 
     public void prepEnd(int value) {
@@ -79,7 +79,9 @@ public class RemoveFirstLinkedList {
         if (length == 0) return null;
         Node firstNode = head;
         head = head.next;
+        firstNode.next = null;
         length--;
+        if (length == 0) tail = null;
         return firstNode;
 
         // 2nd method
