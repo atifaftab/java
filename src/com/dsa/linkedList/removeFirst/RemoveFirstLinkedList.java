@@ -28,4 +28,16 @@ public class RemoveFirstLinkedList {
             temp = temp.next;
         }
     }
+
+    public void preEnd(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        } else {
+            head.next = node;
+            head = node;
+        }
+        length++;
+    }
 }
