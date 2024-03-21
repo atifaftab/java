@@ -59,10 +59,10 @@ public class RemoveFirstLinkedList {
 
     public Node removeLast() {
         if (length == 0) return null;
-        if (length == 1) {
-            head = null;
-            tail = null;
-        }
+//        if (length == 1) {
+//            head = null;
+//            tail = null;
+//        }
         Node temp = head;
         Node pre = head;
         while (temp.next != null) {
@@ -79,5 +79,8 @@ public class RemoveFirstLinkedList {
         return temp;
     }
 
-
+//    public Node removeFirst() {
+//        if (length == 0) return null;
+//
+//    }
 }
