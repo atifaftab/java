@@ -29,6 +29,10 @@ public class RemoveFirstLinkedList {
         }
     }
 
+    public int getLength() {
+        return length;
+    }
+
     public void prepEnd(int value) {
         Node node = new Node(value);
         if (length == 0) {
@@ -50,5 +54,30 @@ public class RemoveFirstLinkedList {
             tail.next = node;
             tail = node;
         }
+        length++;
     }
+
+    public Node removeLast() {
+        if (length == 0) return null;
+        if (length == 1) {
+            head = null;
+            tail = null;
+        }
+        Node temp = head;
+        Node pre = head;
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
+    }
+
+
 }
