@@ -5,6 +5,10 @@ public class RemoveFirstLinkedList {
     private Node tail;
     private int length;
 
+    public void setLength(int length) {
+        this.length = length;
+    }
+
     class Node {
         int value;
         Node next;
@@ -93,5 +97,14 @@ public class RemoveFirstLinkedList {
         }
         return temp;
 
+    }
+
+    public boolean set(int index, int value) {
+        Node temp = get(index);
+        if (temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
     }
 }

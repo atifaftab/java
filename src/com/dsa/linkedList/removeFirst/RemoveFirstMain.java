@@ -35,5 +35,9 @@ public class RemoveFirstMain {
         removeFirstLinkedList.getLength();
 
         System.out.println("index at 2 : " + removeFirstLinkedList.get(2).value);
+
+        System.out.println(removeFirstLinkedList.set(1, 5));
+        removeFirstLinkedList.printLinkedList();
+
     }
 }
