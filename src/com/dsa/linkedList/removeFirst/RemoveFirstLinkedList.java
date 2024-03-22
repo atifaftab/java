@@ -83,11 +83,15 @@ public class RemoveFirstLinkedList {
         length--;
         if (length == 0) tail = null;
         return firstNode;
+    }
 
-        // 2nd method
-//        Node temp = head.next;
-//        head = null;
-//        head = temp;
-//        return temp;
+    public Node get(int index) {
+        if (index < 0 || index >= length) return null;
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+
     }
 }
