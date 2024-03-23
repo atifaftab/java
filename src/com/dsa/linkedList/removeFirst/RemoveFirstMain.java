@@ -38,6 +38,14 @@ public class RemoveFirstMain {
 
         System.out.println(removeFirstLinkedList.set(1, 5));
         removeFirstLinkedList.printLinkedList();
+        System.out.println("-----re arranging ----");
+        removeFirstLinkedList.set(1, 1);
+        removeFirstLinkedList.printLinkedList();
+
+        System.out.println("-----adding 4 at index 2 ----");
+        removeFirstLinkedList.insert(0, 4);
+        removeFirstLinkedList.printLinkedList();
+
 
     }
 }
