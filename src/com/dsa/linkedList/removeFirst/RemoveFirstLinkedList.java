@@ -130,4 +130,22 @@ public class RemoveFirstLinkedList {
         length++;
         return true;
     }
+
+    public boolean insertSecondMethod(int index, int value) {
+        if (index < 0 || index > length) return false;
+        if (index == 0) {
+            prepEnd(value);
+            return true;
+        }
+        if (index == length) {
+            appEnd(value);
+            return true;
+        }
+        Node node = new Node(value);
+        Node temp = get(index - 1);
+        node.next = temp.next;
+        temp.next = node;
+        length++;
+        return true;
+    }
 }
