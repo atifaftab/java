@@ -132,7 +132,7 @@ public class AllLinkedList {
     }
 
     //better method
-    public boolean insertSecondMethod(int index, int value) {
+    public boolean insert2(int index, int value) {
         if (index < 0 || index > length) return false;
         if (index == 0) {
             prepEnd(value);
@@ -151,15 +151,9 @@ public class AllLinkedList {
     }
 
     public Node remove(int index) {
-        if (index < 0 || index > length) return null;
-        if (index == 0) {
-            removeFirst();
-            return head;
-        }
-        if (index == length) {
-            removeLast();
-            return tail;
-        }
+        if (index < 0 || index >= length) return null;
+        if (index == 0) removeFirst();
+        if (index == length - 1) removeLast();
         Node temp = head;
         Node pre = head;
         for (int i = 0; i < index; i++) {
@@ -170,5 +164,30 @@ public class AllLinkedList {
         temp.next = null;
         length--;
         return temp;
+    }
+
+    public Node remove2(int index) {
+        if (index < 0 || index >= length) return null;
+        if (index == 0) return removeFirst();
+        if (index == length -1) return removeLast();
+        Node pre = get(index - 1);
+        Node temp = pre.next;
+        pre.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
+    public void reverse(){
+        Node temp = head;
+        head = tail;
+        tail = temp;
+        temp = head;
+        Node pre = head;
+        for (int i=0; i<length;i++){
+            temp = temp.next;
+            temp.next = pre;
+        }
+//        head = null;
     }
 }
