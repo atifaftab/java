@@ -182,12 +182,11 @@ public class AllLinkedList {
         Node temp = head;
         head = tail;
         tail = temp;
-        temp = head;
-        Node pre = head;
-        for (int i=0; i<length;i++){
-            temp = temp.next;
-            temp.next = pre;
+
+        Node after = temp.next;
+        Node before = null;
+        for(int i=0; i< length; i++){
+
         }
-//        head = null;
     }
 }
