@@ -20,7 +20,6 @@ public class CopyArray {
         System.arraycopy(arr, 0, copyArr1, 0, arr.length);
         System.out.println(Arrays.toString(copyArr1));
 
-
         //using clone
         int[] copyArr2 = arr.clone();
         System.out.println(Arrays.toString(copyArr2));
@@ -32,6 +31,8 @@ public class CopyArray {
         //Arrays.copyOfRange(), Arrays.copyOfRange(original Array, from, to)
         int[] copyArr4 = Arrays.copyOfRange(arr, 0, arr.length);
         System.out.println(Arrays.toString(copyArr4));
+        System.out.println(arr.length);
+        System.out.println(copyArr4.length);
 
     }
 }
