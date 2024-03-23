@@ -55,6 +55,10 @@ public class AllLinkedListMain {
         System.out.println("removed node value : " + allLinkedList.remove(3));
         allLinkedList.printLinkedList();
 
+        System.out.println("------reversing the linkedlist---");
+        allLinkedList.reverse();
+        allLinkedList.printLinkedList();
+
 
     }
 }
