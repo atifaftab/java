@@ -3,6 +3,7 @@ package com.arrays;
 import java.util.Arrays;
 
 public class ArraysEquality {
+    //check both arrays are equals
     public static void main(String[] args) {
         int[] a = {30, 25, 40};
         int[] b = {30, 25, 40};
