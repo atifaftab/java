@@ -169,7 +169,7 @@ public class AllLinkedList {
     public Node remove2(int index) {
         if (index < 0 || index >= length) return null;
         if (index == 0) return removeFirst();
-        if (index == length -1) return removeLast();
+        if (index == length - 1) return removeLast();
         Node pre = get(index - 1);
         Node temp = pre.next;
         pre.next = temp.next;
@@ -178,15 +178,18 @@ public class AllLinkedList {
         return temp;
     }
 
-    public void reverse(){
+    public void reverse() {
         Node temp = head;
         head = tail;
         tail = temp;
 
         Node after = temp.next;
         Node before = null;
-        for(int i=0; i< length; i++){
-
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
         }
     }
 }
