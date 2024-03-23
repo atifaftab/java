@@ -1,6 +1,6 @@
-package com.dsa.linkedList.removeFirst;
+package com.dsa.linkedList.all;
 
-public class RemoveFirstLinkedList {
+public class AllLinkedList {
     private Node head;
     private Node tail;
     private int length;
@@ -18,7 +18,7 @@ public class RemoveFirstLinkedList {
         }
     }
 
-    RemoveFirstLinkedList(int value) {
+    AllLinkedList(int value) {
         Node node = new Node(value);
         head = node;
         tail = node;
