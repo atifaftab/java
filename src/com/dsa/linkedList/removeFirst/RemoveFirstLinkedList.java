@@ -111,6 +111,14 @@ public class RemoveFirstLinkedList {
     public boolean insert(int index, int value) {
         if (index < 0 || index > length) return false;
         Node node = new Node(value);
+        if (index == 0) {
+            prepEnd(value);
+            return true;
+        }
+        if (index == length) {
+            appEnd(value);
+            return true;
+        }
         Node temp = head;
         Node pre = head;
         for (int i = 0; i < index; i++) {
