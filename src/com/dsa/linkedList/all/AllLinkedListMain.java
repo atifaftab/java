@@ -1,7 +1,5 @@
 package com.dsa.linkedList.all;
 
-import java.io.FilterOutputStream;
-
 public class AllLinkedListMain {
     public static void main(String[] args) {
         AllLinkedList allLinkedList = new AllLinkedList(3);
@@ -45,16 +43,16 @@ public class AllLinkedListMain {
         allLinkedList.printLinkedList();
 
         System.out.println("-----adding 4 at index 2 ----");
-        System.out.println(allLinkedList.insertSecondMethod(0, 4));
+        System.out.println(allLinkedList.insert2(0, 4));
         allLinkedList.printLinkedList();
 
 
-        System.out.println("-----keeping correct form--------");
-        allLinkedList.remove(0);
-        allLinkedList.printLinkedList();
+//        System.out.println("-----keeping correct form--------");
+//        allLinkedList.remove(0);
+//        allLinkedList.printLinkedList();
 
         System.out.println("-----removing from index  ----");
-        System.out.println("removed node value : " + allLinkedList.remove(0).value);
+        System.out.println("removed node value : " + allLinkedList.remove(3));
         allLinkedList.printLinkedList();
 
 
