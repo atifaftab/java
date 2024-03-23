@@ -107,4 +107,19 @@ public class RemoveFirstLinkedList {
         }
         return false;
     }
+
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) return false;
+        Node node = new Node(value);
+        Node temp = head;
+        Node pre = head;
+        for (int i = 0; i < index; i++) {
+            pre = temp;
+            temp = temp.next;
+        }
+        pre.next = node;
+        node.next = temp;
+        length++;
+        return true;
+    }
 }
