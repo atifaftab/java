@@ -149,4 +149,26 @@ public class AllLinkedList {
         length++;
         return true;
     }
+
+    public Node remove(int index) {
+        if (index < 0 || index > length) return null;
+        if (index == 0) {
+            removeFirst();
+            return head;
+        }
+        if (index == length) {
+            removeLast();
+            return tail;
+        }
+        Node temp = head;
+        Node pre = head;
+        for (int i = 0; i < index; i++) {
+            pre = temp;
+            temp = temp.next;
+        }
+        pre.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
 }
