@@ -58,4 +58,42 @@ public class InsertLinkedList {
         }
         length++;
     }
+
+    public void prepend(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        }
+        node.next = head;
+        head = node;
+        length++;
+    }
+
+    public Node get(int index) {
+        if (index < 0 || index > length) return null;
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) return false;
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+        if (index == length) {
+            appEnd(value);
+            return true;
+        }
+        Node node = new Node(value);
+        Node temp = get(index - 1);
+        node.next = temp.next;
+        temp.next = node;
+        length++;
+        return true;
+    }
 }
