@@ -43,7 +43,7 @@ public class RemoveFirstMain {
         removeFirstLinkedList.printLinkedList();
 
         System.out.println("-----adding 4 at index 2 ----");
-        removeFirstLinkedList.insert(0, 4);
+        System.out.println(removeFirstLinkedList.insert(1, 4));
         removeFirstLinkedList.printLinkedList();
 
 
