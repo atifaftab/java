@@ -1,6 +1,6 @@
-package com.dsa.linkedList.programmes;
+package com.dsa.linkedList.findMiddleNode;
 
-public class LinkedList {
+public class FindMiddleNodeLinkedList {
 
     private Node head;
     private Node tail;
@@ -14,7 +14,7 @@ public class LinkedList {
         }
     }
 
-    public LinkedList(int value) {
+    public FindMiddleNodeLinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
