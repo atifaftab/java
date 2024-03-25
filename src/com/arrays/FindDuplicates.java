@@ -1,9 +1,7 @@
 package com.arrays;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 //returns duplicates elements from array
 public class FindDuplicates {
@@ -27,5 +25,25 @@ public class FindDuplicates {
                 duplicates.add(n);
         }
         System.out.println(duplicates);
+
+//        Arrays.stream(arr)
+//                .collect(Collectors.toSet());
+//        System.out.println(Arrays.toString(integerList));
+
+
+        System.out.println("---using java8-----");
+        int[] arr1 = new int[]{2, 54, 3, 86, 2, 9,3, 5, 1, 1};
+
+        Arrays.stream(arr1).distinct().forEach(System.out::println);
+
+        List<String> listWithDuplicates = new ArrayList<>();
+        listWithDuplicates.add("apple");
+        listWithDuplicates.add("banana");
+        listWithDuplicates.add("apple");
+
+        List<String> listWithoutDuplicates = listWithDuplicates.stream()
+                .distinct()
+                .toList();
+        listWithoutDuplicates.forEach(System.out::println);
     }
 }
