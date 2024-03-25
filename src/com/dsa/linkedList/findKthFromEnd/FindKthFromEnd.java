@@ -80,7 +80,7 @@ public class FindKthFromEnd {
             if (fast == null) return null;
             fast = fast.next;
         }
-        while (fast.next != null) {
+        while (fast != null) {
             slow = slow.next;
             fast = fast.next;
         }
