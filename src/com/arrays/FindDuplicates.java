@@ -36,6 +36,7 @@ public class FindDuplicates {
 
         Arrays.stream(arr1).distinct().forEach(System.out::println);
 
+        //for comment
         List<String> listWithDuplicates = new ArrayList<>();
         listWithDuplicates.add("apple");
         listWithDuplicates.add("banana");
