@@ -15,6 +15,7 @@ public class FindMinimum {
         System.out.println("min = " + min);
 
 
+        //using java8
         Optional<Integer> min1 = num.stream().min(Integer::compareTo);
         min1.ifPresent(System.out::println);
     }
