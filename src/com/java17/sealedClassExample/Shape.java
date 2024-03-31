@@ -6,11 +6,7 @@ public sealed class Shape permits Circle, Rectangle{
     }
 }
 final class Circle extends Shape{
-    @Override
-    public void print(){
-        System.out.println("true = " + true);
-    }
-    
+
 }
 non-sealed class Rectangle extends Shape{
     
