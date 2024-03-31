@@ -22,7 +22,5 @@ public class PrimeNumbers {
     //using lambda
     private static boolean primeNo(int num) {
         return num > 1 && IntStream.range(2, (int) Math.sqrt(num)).noneMatch(i -> num % i == 0);
-
-//        num>1 && IntStream.range(2, (int)Math.sqrt(num)).noneMatch(i -> num %==0);
     }
 }
