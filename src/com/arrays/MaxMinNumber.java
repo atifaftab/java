@@ -1,5 +1,7 @@
 package com.arrays;
 
+import java.util.Arrays;
+
 public class MaxMinNumber {
     public static void main(String[] args) {
         // find maximum and minimum number
@@ -24,5 +26,10 @@ public class MaxMinNumber {
 
         System.out.println("max : " + max);
         System.out.println("min : " + min);
+
+        System.out.println("---------");
+
+        System.out.println(Arrays.stream(arrNum).max().getAsInt());
+        System.out.println(Arrays.stream(arrNum).min().getAsInt());
     }
 }
