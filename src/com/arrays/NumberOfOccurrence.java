@@ -1,5 +1,7 @@
 package com.arrays;
 
+import java.util.Arrays;
+
 public class NumberOfOccurrence {
     public static void main(String[] args) {
         int[] arrInt = new int[]{1, 1, 1, 2, 2, 3, 4};
@@ -7,6 +9,9 @@ public class NumberOfOccurrence {
 
         System.out.println("number of occurrence " + getNumberOcc(arrInt, searchElement));
         System.out.println("1st occurrence at index " + get1stPosition(arrInt, searchElement));
+
+        System.out.println("-----");
+        System.out.println(Arrays.stream(arrInt).anyMatch(i -> i == searchElement));
     }
 
     public static int getNumberOcc(int[] numberArr, int searchElement) {
