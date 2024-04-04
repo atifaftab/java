@@ -3,11 +3,10 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class TestClass {
     public static List<Employee> getEmployeeList() {
-        ArrayList empList = new ArrayList<Employee>();
+        ArrayList<Employee> empList = new ArrayList<>();
         empList.add(new Employee(1, "Bala", "Nelavalli", "bala@gmail.com", 1000));
         empList.add(new Employee(2, "Rama", "surname1", "rala@gmail.com", 2000));
         empList.add(new Employee(3, "Krishna", "surname2", "krishna@gmail.com", 2000));
