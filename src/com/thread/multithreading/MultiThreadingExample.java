@@ -1,10 +1,10 @@
 package com.thread.multithreading;
 
-public class MultithreadThing extends Thread {
+public class MultiThreadingExample extends Thread {
 
     private int number;
 
-    public MultithreadThing(int num) {
+    public MultiThreadingExample(int num) {
         number = num;
     }
 
