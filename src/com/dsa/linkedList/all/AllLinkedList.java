@@ -110,7 +110,6 @@ public class AllLinkedList {
 
     public boolean insert(int index, int value) {
         if (index < 0 || index > length) return false;
-        Node node = new Node(value);
         if (index == 0) {
             prepEnd(value);
             return true;
@@ -119,6 +118,7 @@ public class AllLinkedList {
             appEnd(value);
             return true;
         }
+        Node node = new Node(value);
         Node temp = head;
         Node pre = head;
         for (int i = 0; i < index; i++) {
