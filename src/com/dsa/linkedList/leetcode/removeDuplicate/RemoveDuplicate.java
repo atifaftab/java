@@ -78,6 +78,8 @@ public class RemoveDuplicate {
     //                                        //
     //                                        //
     ////////////////////////////////////////////
+
+    //time complexity 0(1)
     public void removeDuplicates() {
         Set<Integer> setInt = new HashSet<>();
         Node temp = head;
@@ -93,15 +95,8 @@ public class RemoveDuplicate {
             temp = temp.next;
         }
     }
-      /*
-        1
-        1
-        2
-        2
-        3
-        3
-        3
-        4
-        */
+    public void removeDup(){
+
+    }
 
 }
