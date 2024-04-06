@@ -74,6 +74,7 @@ public class FindKthFromEnd {
     //                                  //
     //////////////////////////////////////
     public Node findKthFromEnd(int k) {
+        //length is not provided in this LinkedList
         Node fast = head;
         Node slow = head;
         for (int i = 0; i < k; i++) {
