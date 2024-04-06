@@ -1,4 +1,4 @@
-package com.dsa.linkedList.partition;
+package com.dsa.linkedList.leetcode.partition;
 
 public class PartitionLowerHigher {
     private Node head;

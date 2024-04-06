@@ -1,4 +1,4 @@
-package com.dsa.linkedList.findKthFromEnd;
+package com.dsa.linkedList.leetcode.findKthFromEnd;
 
 public class FindKthFromEndMain {
     public static void main(String[] args) {

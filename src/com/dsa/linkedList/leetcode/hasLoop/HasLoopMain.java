@@ -1,4 +1,4 @@
-package com.dsa.linkedList.hasLoop;
+package com.dsa.linkedList.leetcode.hasLoop;
 
 public class HasLoopMain {
     public static void main(String[] args) {

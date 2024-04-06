@@ -1,4 +1,4 @@
-package com.dsa.linkedList.findMiddleNode;
+package com.dsa.linkedList.leetcode.findMiddleNode;
 
 public class Main {
     public static void main(String[] args) {

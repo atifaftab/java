@@ -1,7 +1,6 @@
-package com.dsa.linkedList.findMiddleNode;
+package com.dsa.linkedList.leetcode.findKthFromEnd;
 
-public class FindMiddleNodeLinkedList {
-
+public class FindKthFromEnd {
     private Node head;
     private Node tail;
 
@@ -14,7 +13,7 @@ public class FindMiddleNodeLinkedList {
         }
     }
 
-    public FindMiddleNodeLinkedList(int value) {
+    public FindKthFromEnd(int value) {
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
@@ -68,20 +67,24 @@ public class FindMiddleNodeLinkedList {
         }
     }
 
-    // WRITE FIND MIDDLE NODE METHOD HERE //
-    //                                    //
-    //                                    //
-    //                                    //
-    //                                    //
-    ////////////////////////////////////////
-    public Node findMiddleNode(){
+    // WRITE FINDKTHFROMEND METHOD HERE //
+    //                                  //
+    //                                  //
+    //                                  //
+    //                                  //
+    //////////////////////////////////////
+    public Node findKthFromEnd(int k) {
+        //length is not provided in this LinkedList
         Node fast = head;
         Node slow = head;
-        while (fast != null && fast.next != null){
+        for (int i = 0; i < k; i++) {
+            if (fast == null) return null;
+            fast = fast.next;
+        }
+        while (fast != null) {
             slow = slow.next;
-            fast = fast.next.next;
+            fast = fast.next;
         }
         return slow;
     }
 }
-
