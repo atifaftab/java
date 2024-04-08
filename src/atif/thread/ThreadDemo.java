@@ -18,7 +18,7 @@ public class ThreadDemo {
 
 class A extends Thread {
     public void run() {
-        for (int i = 0; i <= 100; i++) {
+        for (int i = 0; i <= 10; i++) {
             System.out.println("Hi");
             try {
                 Thread.sleep(2);
@@ -31,7 +31,7 @@ class A extends Thread {
 
 class B extends Thread {
     public void run() {
-        for (int i = 0; i <= 100; i++) {
+        for (int i = 0; i <= 10; i++) {
             System.out.println("Hello");
             try {
                 Thread.sleep(2);
