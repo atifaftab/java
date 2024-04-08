@@ -1,8 +1,10 @@
 package atif.collections.list;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class FindMinimum {
     public static void main(String[] args) {
@@ -18,5 +20,8 @@ public class FindMinimum {
         //using java8
         Optional<Integer> min1 = num.stream().min(Integer::compareTo);
         min1.ifPresent(System.out::println);
+        System.out.println("------");
+        //using Collectors.minBy
+        System.out.println(num.stream().collect(Collectors.minBy(Comparator.comparing(Integer::intValue))).get());
     }
 }
