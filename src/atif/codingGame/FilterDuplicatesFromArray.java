@@ -12,7 +12,7 @@ public class FilterDuplicatesFromArray {
         //using stream
         System.out.println(Arrays.stream(arr).distinct().boxed().toList());
         System.out.println("-------");
-        System.out.println(Arrays.toString(filterDuplicates(arr)));
+        System.out.println(Arrays.toString(filterDuplicate(arr)));
     }
 
     public static int[] filterDuplicates(int[] arr) {
@@ -37,5 +37,10 @@ public class FilterDuplicatesFromArray {
         }
         return unique.stream().mapToInt(Integer::intValue).toArray();
 
+    }
+
+    //another method using stream
+    public static int[] filterDuplicate(int[] arr) {
+        return Arrays.stream(arr).distinct().toArray();
     }
 }
