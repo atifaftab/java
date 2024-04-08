@@ -8,6 +8,10 @@ public class FilterDuplicatesFromArray {
     public static void main(String[] args) {
 
         int[] arr = new int[]{1, 8, 2, 7, 3, 9, 6, 9, 1, 4, 2};
+
+        //using stream
+        System.out.println(Arrays.stream(arr).distinct().boxed().toList());
+        System.out.println("-------");
         System.out.println(Arrays.toString(filterDuplicates(arr)));
     }
 
@@ -25,11 +29,10 @@ public class FilterDuplicatesFromArray {
 //        return a;
 
 
-
         //using linkedHashset
         LinkedHashSet<Integer> unique = new LinkedHashSet<>();
 
-        for(Integer n : arr){
+        for (Integer n : arr) {
             unique.add(n);
         }
         return unique.stream().mapToInt(Integer::intValue).toArray();
