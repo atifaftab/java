@@ -43,6 +43,7 @@ public class Car {
         return "Car{" +
                 "type='" + type + '\'' +
                 ", mileage='" + mileage + '\'' +
+                ", brakeWorks=" + brakeWorks +
                 '}';
     }
 }
