@@ -33,11 +33,6 @@ public class Car {
             return this;
         }
 
-        public Builder brakeWorks(boolean brakeWorks) {
-            this.brakeWorks = brakeWorks;
-            return this;
-        }
-
         public Car build() {
             return new Car(this);
         }
