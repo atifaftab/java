@@ -1,5 +1,9 @@
 package atif.string;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class ReverseString {
     public static void main(String[] args) {
 
@@ -32,17 +36,16 @@ public class ReverseString {
 
         String str = "word";
 
-        String reverse ="";
+        String reverse = "";
 
         System.out.println(str);
 
-        for(int i=0; i<str.length();i++){
+        for (int i = 0; i < str.length(); i++) {
 
             reverse = str.charAt(i) + reverse;
 
         }
 
         System.out.println(reverse);
-
     }
 }
