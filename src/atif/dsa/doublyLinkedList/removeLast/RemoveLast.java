@@ -26,7 +26,7 @@ public class RemoveLast {
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.value);
-            temp = tail.next;
+            temp = temp.next;
         }
     }
 
@@ -35,7 +35,12 @@ public class RemoveLast {
         if (length == 0) {
             head = node;
             tail = node;
+        } else {
+            tail.next = node;
+            node.prev = tail;
+            tail = node;
         }
+        length++;
     }
 
     public Node removeLast() {
