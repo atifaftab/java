@@ -1,4 +1,4 @@
-package atif.dsa.append;
+package atif.dsa.doublyLinkedList.append;
 
 public class Append {
     private Node head;

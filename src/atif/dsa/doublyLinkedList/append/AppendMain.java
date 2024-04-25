@@ -1,4 +1,4 @@
-package atif.dsa.append;
+package atif.dsa.doublyLinkedList.append;
 
 public class AppendMain {
     public static void main(String[] args) {
