@@ -44,13 +44,13 @@ public class Append {
 
     public void append(int value) {
         Node node = new Node(value);
-        if (head == null) {
+        if (length == 0) {
             head = node;
             tail = node;
             return;
         }
         tail.next = node;
-        node.next = tail;
+        node.prev = tail;
         tail = node;
         length++;
     }
