@@ -22,6 +22,8 @@ class SingletonDemoClass {
     }
 
     public static SingletonDemoClass getInstance() {
+        //why we check its null, to make sure if no instance there then and only then we create new instance
+        //otherwise we send back the already created instance
         if (singletonDemoClassObj == null)
             singletonDemoClassObj = new SingletonDemoClass();
         return singletonDemoClassObj;
