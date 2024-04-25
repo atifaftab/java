@@ -1,4 +1,4 @@
-package atif.dsa.doublyLinkedList;
+package atif.dsa.doublyLinkedList.mainExample;
 
 public class DoublyLinkedListExample {
     private Node head;
