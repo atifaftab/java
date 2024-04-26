@@ -6,8 +6,13 @@ public class RemoveLastMain {
         list.append(2);
         list.displayList();
 
+        //removing 2
         System.out.println("2: " + list.removeLast().value);
+        //removing 1
+
         System.out.println("1: " + list.removeLast().value);
+        //removing null
+
         System.out.println("null: " + list.removeLast());
     }
 }
