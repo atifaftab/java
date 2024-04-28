@@ -32,6 +32,19 @@ public class RemoveFirst {
         }
     }
 
+    public void append(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        }else {
+            tail.next = node;
+            node.prev = tail;
+            tail = node;
+        }
+        length++;
+    }
+
     public Node removeFirst() {
         if (length == 0) return null;
         Node temp = head;
