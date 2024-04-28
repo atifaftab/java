@@ -37,7 +37,7 @@ public class RemoveFirst {
         if (length == 0) {
             head = node;
             tail = node;
-        }else {
+        } else {
             tail.next = node;
             node.prev = tail;
             tail = node;
@@ -55,6 +55,21 @@ public class RemoveFirst {
         if (length == 0) {
             head = null;
             tail = null;
+        }
+        length--;
+        return temp;
+    }
+
+    public Node removeFirst1() {
+        if (length == 0) return null;
+        Node temp = head;
+        if (length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            temp.next = null;
+            head.prev = null;
         }
         length--;
         return temp;
