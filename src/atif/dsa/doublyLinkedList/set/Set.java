@@ -38,8 +38,9 @@ public class Set {
                 temp = temp.next;
             }
         } else {
-            for (int i = length - 1; i > index; i++) {
-                temp = temp.next;
+            temp = tail;
+            for (int i = length - 1; i > index; i--) {
+                temp = temp.prev;
             }
         }
         return temp;
