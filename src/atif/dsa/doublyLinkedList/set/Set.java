@@ -31,6 +31,7 @@ public class Set {
             temp = temp.next;
         }
     }
+
     public void append(int value) {
         Node node = new Node(value);
         if (length == 0) {
@@ -60,11 +61,12 @@ public class Set {
         return temp;
     }
 
-    public void set(int index, int value) {
-        if (index < 0 || index >= length) return;
+    public boolean set(int index, int value) {
         Node temp = get(index);
         if (temp != null) {
             temp.value = value;
+            return true;
         }
+        return false;
     }
 }
