@@ -1,5 +1,7 @@
 package atif.dsa.doublyLinkedList.set;
 
+import atif.dsa.doublyLinkedList.get.Get;
+
 public class Set {
     private Node head;
     private Node tail;
@@ -28,6 +30,18 @@ public class Set {
             System.out.println(temp.value);
             temp = temp.next;
         }
+    }
+    public void append(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+            return;
+        }
+        tail.next = node;
+        node.prev = tail;
+        tail = node;
+        length++;
     }
 
     public Node get(int index) {
