@@ -49,15 +49,37 @@ public class Insert {
         return temp;
     }
 
+    public void append(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        }
+        node.next = head;
+        head.prev = node;
+        head = node;
+    }
+
+    public void prepend(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        } else {
+            node.next = head;
+            head.prev = node;
+            head = node;
+        }
+    }
+
 
     public boolean insert(int index, int value) {
-        if(index==0){
-            append(value);
-        }
+        if (index == 0) prepend(value);
+        if (index == length - 1) append(value);
         Node temp = get(index);
-        Node pre = temp(index-1);
-        if(temp!=null){
-            Node pre = temp.prev;
+        Node pre = get(index - 1);
+        if (temp != null) {
+//            Node pre = temp.prev;
         }
         return false;
     }
