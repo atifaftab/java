@@ -70,16 +70,29 @@ public class Insert {
             head.prev = node;
             head = node;
         }
+        length++;
     }
 
 
     public boolean insert(int index, int value) {
-        if (index == 0) prepend(value);
-        if (index == length - 1) append(value);
+        if (index < 0 || index > length) return false;
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+        if (index == length) {
+            append(value);
+            return true;
+        }
+        Node node = new Node(value);
         Node temp = get(index);
-        Node pre = get(index - 1);
+        Node pre = temp.prev;
         if (temp != null) {
-//            Node pre = temp.prev;
+            pre.next = node;
+            node.next = temp;
+            temp.prev = node;
+            node.prev = pre;
+            return true;
         }
         return false;
     }
