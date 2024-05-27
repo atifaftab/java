@@ -5,7 +5,13 @@ import java.util.concurrent.Executors;
 
 public class ExecutorExample implements Runnable {
     public static void main(String[] args) {
-        ExecutorService service = Executors.newFixedThreadPool(10);
+
+        //get the count of available cores
+        int count = Runtime.getRuntime().availableProcessors();
+        //create the pool
+        ExecutorService service = Executors.newFixedThreadPool(count);
+
+        //submit the task for execution
         for (int i = 0; i < 10; i++) {
 //            Thread t1 = new Thread(new ExecutorExample());
 //            t1.start();
