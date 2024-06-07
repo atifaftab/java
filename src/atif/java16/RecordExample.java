@@ -7,3 +7,11 @@ public record RecordExample(int id, String name) {
 //    A public constructor that initializes all components.
 //    Accessor methods for each component
 }
+
+class Main {
+    public static void main(String[] args) {
+        RecordExample recordExample = new RecordExample(1, "Atif");
+        System.out.println(recordExample.id());
+        System.out.println(recordExample.name());
+    }
+}
