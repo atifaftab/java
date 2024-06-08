@@ -33,6 +33,16 @@ public class ThreadLambda {
                 }
             }
         });
+        Thread t4 = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("4th thread: " + i);
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         t1.start();
         try {
@@ -45,5 +55,6 @@ public class ThreadLambda {
 //        t2.join();
         System.out.println("bye");
         t3.start();
+        t4.start();
     }
 }
