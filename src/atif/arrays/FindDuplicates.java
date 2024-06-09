@@ -17,7 +17,7 @@ public class FindDuplicates {
             }
         }
 
-        //using hashmap
+        //using set
         Set<Integer> unique = new LinkedHashSet<>();
         List<Integer> duplicates = new ArrayList<>();
         for (int n : arr) {
