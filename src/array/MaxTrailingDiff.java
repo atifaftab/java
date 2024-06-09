@@ -19,11 +19,11 @@ public class MaxTrailingDiff {
 
         //efficient way
         int min = num[0];
-        for (int i = 0; i < n; i++) {
-            if (num[i] - min > maxDiff)
-                maxDiff = num[i] - min;
-            if (num[i] < min)
-                min = num[i];
+        for (int j : num) {
+            if (j - min > maxDiff)
+                maxDiff = j - min;
+            if (j < min)
+                min = j;
         }
         System.out.println(maxDiff);
     }
