@@ -55,9 +55,10 @@ public class Insert {
             head = node;
             tail = node;
         }
-        node.next = head;
-        head.prev = node;
-        head = node;
+        tail.next = node;
+        node.prev = tail;
+        tail = node;
+        length++;
     }
 
     public void prepend(int value) {
@@ -87,13 +88,11 @@ public class Insert {
         Node node = new Node(value);
         Node temp = get(index);
         Node pre = temp.prev;
-        if (temp != null) {
-            pre.next = node;
-            node.next = temp;
-            temp.prev = node;
-            node.prev = pre;
-            return true;
-        }
-        return false;
+        pre.next = node;
+        node.next = temp;
+        temp.prev = node;
+        node.prev = pre;
+        length++;
+        return true;
     }
 }
