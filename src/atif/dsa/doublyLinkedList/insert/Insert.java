@@ -85,13 +85,22 @@ public class Insert {
             append(value);
             return true;
         }
-        Node node = new Node(value);
-        Node temp = get(index);
-        Node pre = temp.prev;
-        pre.next = node;
-        node.next = temp;
-        temp.prev = node;
-        node.prev = pre;
+//        Node node = new Node(value);
+//        Node temp = get(index);
+//        Node pre = temp.prev;
+//        pre.next = node;
+//        node.next = temp;
+//        temp.prev = node;
+//        node.prev = pre;
+
+        //not using extra temp Node
+        Node newNode = new Node(value);
+        Node currentNode = get(index - 1);
+        newNode.next = currentNode.next;
+        newNode.prev = currentNode;
+        currentNode.next.prev = newNode;
+        currentNode.next = newNode;
+
         length++;
         return true;
     }
