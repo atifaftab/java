@@ -74,10 +74,10 @@ public class FindMiddleNodeLinkedList {
     //                                    //
     //                                    //
     ////////////////////////////////////////
-    public Node findMiddleNode(){
+    public Node findMiddleNode() {
         Node fast = head;
         Node slow = head;
-        while (fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
