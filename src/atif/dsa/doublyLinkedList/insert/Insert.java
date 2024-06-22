@@ -76,7 +76,7 @@ public class Insert {
 
 
     public boolean insert(int index, int value) {
-        if (index < 0 || index >= length) return false;
+        if (index < 0 || index > length) return false;
         if (index == 0) {
             prepend(value);
             return true;
