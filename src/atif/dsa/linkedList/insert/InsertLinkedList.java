@@ -79,6 +79,8 @@ public class InsertLinkedList {
         return temp;
     }
 
+    //why we can user index>length and insert index == length, because we are inserting
+    // so insert can be added after the length
     public boolean insert(int index, int value) {
         if (index < 0 || index > length) return false;
         if (index == 0) {
