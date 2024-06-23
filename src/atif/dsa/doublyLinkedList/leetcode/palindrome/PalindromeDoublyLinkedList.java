@@ -122,5 +122,15 @@ public class PalindromeDoublyLinkedList {
         return false;
     }
 
-
+    public boolean palindrome2() {
+        if (length <= 1) return true;
+        Node forward = head;
+        Node backward = tail;
+        for (int i = 0; i < length / 2; i++) {
+            if (forward.value != backward.value) return false;
+            forward = forward.next;
+            backward = backward.next;
+        }
+        return true;
+    }
 }
