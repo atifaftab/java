@@ -1,4 +1,4 @@
-package atif.dsa.linkedList;
+package atif.dsa.linkedList.reverse;
 
 public class ReverseLinkedList {
     private Node head;
