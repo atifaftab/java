@@ -129,7 +129,7 @@ public class PalindromeDoublyLinkedList {
         for (int i = 0; i < length / 2; i++) {
             if (forward.value != backward.value) return false;
             forward = forward.next;
-            backward = backward.next;
+            backward = backward.prev;
         }
         return true;
     }
