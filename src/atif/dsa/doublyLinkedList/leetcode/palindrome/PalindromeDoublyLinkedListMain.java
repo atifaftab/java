@@ -7,7 +7,7 @@ public class PalindromeDoublyLinkedListMain {
         list.append(1);
         list.display();
         System.out.println("--------");
-        System.out.println(list.palindrome());
+        System.out.println(list.palindrome2());
     }
 
 }
