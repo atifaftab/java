@@ -1,4 +1,4 @@
-package atif.builder.car;
+package atif.designPattern.builder.car;
 
 public class Car {
     private String type;

@@ -1,4 +1,4 @@
-package atif.builder;
+package atif.designPattern.builder;
 
 public class Main {
     public static void main(String[] args) {

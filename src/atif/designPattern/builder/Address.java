@@ -1,4 +1,4 @@
-package atif.builder;
+package atif.designPattern.builder;
 
 public class Address {
     private String address;
