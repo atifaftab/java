@@ -29,11 +29,27 @@ public class AllPractice {
         }
     }
 
+    void getHead() {
+        System.out.println("Head: " + head.value);
+    }
+
+    void getTail() {
+        System.out.println("Tail: " + tail.value);
+    }
+
+    void getLength() {
+        System.out.println("Length: " + length);
+    }
+
     boolean append(int value) {
         Node node = new Node(value);
-        tail.next = node;
+        if (length == 0) {
+            head = node;
+        } else {
+            tail.next = node;
+        }
         tail = node;
         length++;
-        return  true;
+        return true;
     }
 }
