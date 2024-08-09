@@ -13,7 +13,7 @@ public class AllPracticeMain {
         list.append(4);
         System.out.println("----- after append----");
         list.printList();
-        list.removeLast();
+        System.out.println("Removed Node: " + list.removeLast().value);
         System.out.println("----- after Remove Last----");
         list.printList();
         list.getLength();
