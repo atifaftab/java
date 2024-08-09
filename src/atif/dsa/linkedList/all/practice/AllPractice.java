@@ -51,22 +51,22 @@ public class AllPractice {
         tail = node;
         length++;
     }
-    Node removeLast(){
-        if(length == 0) return null;
-        if(length == 1){
-            length--;
-            tail = null;
-            return head;
-        }
+
+    Node removeLast() {
+        if (length == 0) return null;
         Node temp = head;
         Node pre = head;
-        while(temp.next != null){
+        while (temp.next != null) {
             pre = temp;
             temp = temp.next;
         }
         pre.next = null;
         tail = pre;
         length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
         return temp;
     }
 }
