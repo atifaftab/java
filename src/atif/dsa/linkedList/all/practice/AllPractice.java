@@ -69,4 +69,24 @@ public class AllPractice {
         }
         return temp;
     }
+
+    void prepend(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            head = node;
+            tail = node;
+        }
+        node.next = head;
+        head = node;
+        length++;
+    }
+
+    Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
 }

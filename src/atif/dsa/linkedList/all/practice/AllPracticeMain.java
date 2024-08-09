@@ -17,6 +17,11 @@ public class AllPracticeMain {
         System.out.println("----- after Remove Last----");
         list.printList();
         list.getLength();
-
+        System.out.println("----- Prepend----");
+        list.prepend(0);
+        list.printList();
+        System.out.println("----- Remove First ----");
+        list.removeFirst();
+        list.printList();
     }
 }
