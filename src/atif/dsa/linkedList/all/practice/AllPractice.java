@@ -41,7 +41,7 @@ public class AllPractice {
         System.out.println("Length: " + length);
     }
 
-    boolean append(int value) {
+    void append(int value) {
         Node node = new Node(value);
         if (length == 0) {
             head = node;
@@ -50,6 +50,23 @@ public class AllPractice {
         }
         tail = node;
         length++;
-        return true;
+    }
+    Node removeLast(){
+        if(length == 0) return null;
+        if(length == 1){
+            length--;
+            tail = null;
+            return head;
+        }
+        Node temp = head;
+        Node pre = head;
+        while(temp.next != null){
+            pre = temp;
+            temp = temp.next;
+        }
+        pre.next = null;
+        tail = pre;
+        length--;
+        return temp;
     }
 }
