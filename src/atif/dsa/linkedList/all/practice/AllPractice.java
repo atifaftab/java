@@ -87,6 +87,10 @@ public class AllPractice {
         head = head.next;
         temp.next = null;
         length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
         return temp;
     }
 }

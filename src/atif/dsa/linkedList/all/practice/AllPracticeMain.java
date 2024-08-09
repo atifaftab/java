@@ -21,7 +21,7 @@ public class AllPracticeMain {
         list.prepend(0);
         list.printList();
         System.out.println("----- Remove First ----");
-        list.removeFirst();
+        System.out.println("removed Node: "+list.removeFirst().value);
         list.printList();
     }
 }
