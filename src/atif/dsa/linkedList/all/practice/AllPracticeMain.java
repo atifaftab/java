@@ -27,5 +27,9 @@ public class AllPracticeMain {
         list.prepend(0);
         list.getLength();
         System.out.println(list.get(2).value);
+        System.out.println("----- Set  ----");
+        System.out.println(list.set(3, 2));
+        list.printList();
+
     }
 }

@@ -93,12 +93,22 @@ public class AllPractice {
         }
         return temp;
     }
-    Node get(int index){
-        if(index < 0 || index >= length) return null;
+
+    Node get(int index) {
+        if (index < 0 || index >= length) return null;
         Node temp = head;
-        for(int i =0; i< index; i++){
+        for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
         return temp;
+    }
+
+    boolean set(int index, int value) {
+        Node temp = get(index);
+        if (temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
     }
 }
