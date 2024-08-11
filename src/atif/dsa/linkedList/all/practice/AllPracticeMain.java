@@ -21,7 +21,11 @@ public class AllPracticeMain {
         list.prepend(0);
         list.printList();
         System.out.println("----- Remove First ----");
-        System.out.println("removed Node: "+list.removeFirst().value);
+        System.out.println("removed Node: " + list.removeFirst().value);
         list.printList();
+        System.out.println("----- Get  ----");
+        list.prepend(0);
+        list.getLength();
+        System.out.println(list.get(2).value);
     }
 }
