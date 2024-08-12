@@ -30,6 +30,10 @@ public class AllPracticeMain {
         System.out.println("----- Set  ----");
         System.out.println(list.set(3, 2));
         list.printList();
+        System.out.println("----- insert  ----");
+        System.out.println(list.insert(3, 3));
+        list.printList();
+
 
     }
 }
