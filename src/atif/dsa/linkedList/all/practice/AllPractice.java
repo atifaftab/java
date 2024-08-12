@@ -21,7 +21,7 @@ public class AllPractice {
         length = 1;
     }
 
-    void printList() {
+    public void printList() {
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.value);
@@ -29,19 +29,19 @@ public class AllPractice {
         }
     }
 
-    void getHead() {
+    public void getHead() {
         System.out.println("Head: " + head.value);
     }
 
-    void getTail() {
+    public void getTail() {
         System.out.println("Tail: " + tail.value);
     }
 
-    void getLength() {
+    public void getLength() {
         System.out.println("Length: " + length);
     }
 
-    void append(int value) {
+    public void append(int value) {
         Node node = new Node(value);
         if (length == 0) {
             head = node;
@@ -52,7 +52,7 @@ public class AllPractice {
         length++;
     }
 
-    Node removeLast() {
+    public Node removeLast() {
         if (length == 0) return null;
         Node temp = head;
         Node pre = head;
@@ -70,7 +70,7 @@ public class AllPractice {
         return temp;
     }
 
-    void prepend(int value) {
+    public void prepend(int value) {
         Node node = new Node(value);
         if (length == 0) {
             head = node;
@@ -81,7 +81,7 @@ public class AllPractice {
         length++;
     }
 
-    Node removeFirst() {
+    public Node removeFirst() {
         if (length == 0) return null;
         Node temp = head;
         head = head.next;
@@ -94,7 +94,7 @@ public class AllPractice {
         return temp;
     }
 
-    Node get(int index) {
+    public Node get(int index) {
         if (index < 0 || index >= length) return null;
         Node temp = head;
         for (int i = 0; i < index; i++) {
@@ -103,7 +103,7 @@ public class AllPractice {
         return temp;
     }
 
-    boolean set(int index, int value) {
+    public boolean set(int index, int value) {
         Node temp = get(index);
         if (temp != null) {
             temp.value = value;
