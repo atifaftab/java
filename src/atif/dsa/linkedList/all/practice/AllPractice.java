@@ -141,4 +141,19 @@ public class AllPractice {
         length--;
         return temp;
     }
+
+    public void reverse() {
+        if (length == 0) return;
+        Node temp = head;
+        head = tail;
+        tail = temp;
+        Node after = temp.next;
+        Node pre = null;
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = pre;
+            pre = temp;
+            temp = after;
+        }
+    }
 }

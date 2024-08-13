@@ -36,9 +36,11 @@ public class AllPracticeMain {
         System.out.println("----- insert  ----");
         System.out.println(list.insert(4, 4));
         list.printList();
+        System.out.println("----- remove  ----");
         System.out.println(list.remove(5));
         list.printList();
-
-
+        System.out.println("----- reverse  ----");
+        list.reverse();
+        list.printList();
     }
 }
