@@ -45,6 +45,5 @@ public class AllPracticeMain {
         list.printList();
         System.out.println("----- find Middle Node  ----");
         System.out.println(list.findMiddleNode().value);
-
     }
 }

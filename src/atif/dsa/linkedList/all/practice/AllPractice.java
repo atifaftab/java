@@ -167,5 +167,17 @@ public class AllPractice {
         }
         return pre;
     }
-
+//    public boolean hasLoop() {
+//        if (length == 0) return false;
+//        Node fast = head;
+//        Node slow = head;
+//        while (fast != null && fast.next != null) {
+//            slow = slow.next;
+//            fast = fast.next.next;
+//            if (slow == fast) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 }
