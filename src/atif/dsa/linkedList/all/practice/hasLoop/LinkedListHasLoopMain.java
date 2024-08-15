@@ -7,6 +7,9 @@ public class LinkedListHasLoopMain {
         list.append(2);
         list.append(3);
         list.allPrint();
+        list.createLoop();
+//        list.allPrint();
+
     }
 
 }

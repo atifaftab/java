@@ -56,4 +56,9 @@ public class LinkedListHasLoop {
         tail = node;
         length++;
     }
+
+    public void createLoop() {
+        tail.next = head;
+    }
+
 }
