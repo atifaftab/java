@@ -156,4 +156,16 @@ public class AllPractice {
             temp = after;
         }
     }
+
+    public Node findMiddleNode() {
+        if (length == 0) return null;
+        Node temp = head;
+        Node pre = head;
+        while (temp != null && temp.next != null) {
+            pre = pre.next;
+            temp = temp.next.next;
+        }
+        return pre;
+    }
+
 }
