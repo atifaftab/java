@@ -167,17 +167,19 @@ public class AllPractice {
         }
         return pre;
     }
-//    public boolean hasLoop() {
-//        if (length == 0) return false;
-//        Node fast = head;
-//        Node slow = head;
-//        while (fast != null && fast.next != null) {
-//            slow = slow.next;
-//            fast = fast.next.next;
-//            if (slow == fast) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+
+    public Node findKthNode(int index) {
+        if (index < 0 || index >= length) return null;
+        Node fast = head;
+        Node slow = head;
+        for (int i = 0; i < index; i++) {
+            if (fast == null) return null;
+            fast = fast.next;
+        }
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
 }

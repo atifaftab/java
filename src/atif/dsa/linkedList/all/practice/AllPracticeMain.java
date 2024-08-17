@@ -37,7 +37,7 @@ public class AllPracticeMain {
         System.out.println(list.insert(4, 4));
         list.printList();
         System.out.println("----- remove  ----");
-        System.out.println(list.remove(5));
+        System.out.println(list.remove(5).value);
         list.printList();
         System.out.println("----- reverse  ----");
         list.reverse();
@@ -45,5 +45,9 @@ public class AllPracticeMain {
         list.printList();
         System.out.println("----- find Middle Node  ----");
         System.out.println(list.findMiddleNode().value);
+        System.out.println("----- find Kth Node  ----");
+        list.printList();
+        System.out.println("the 3rd Node from end value: " + list.findKthNode(3).value);
+
     }
 }
