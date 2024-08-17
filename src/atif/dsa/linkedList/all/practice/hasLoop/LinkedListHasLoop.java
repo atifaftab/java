@@ -33,7 +33,6 @@ public class LinkedListHasLoop {
         } else {
             printList();
         }
-
     }
 
     public void printList() {

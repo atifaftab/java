@@ -182,4 +182,5 @@ public class AllPractice {
         }
         return slow;
     }
+
 }
