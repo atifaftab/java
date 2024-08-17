@@ -3,7 +3,6 @@ package atif.dsa.linkedList.all.practice.hasLoop;
 public class LinkedListHasLoop {
     private Node head;
     private Node tail;
-    private int length;
 
     class Node {
         Node next;
@@ -18,7 +17,6 @@ public class LinkedListHasLoop {
         Node node = new Node(value);
         head = node;
         tail = node;
-        length = 1;
     }
 
     public void allPrint() {
@@ -54,7 +52,6 @@ public class LinkedListHasLoop {
             tail.next = node;
         }
         tail = node;
-        length++;
     }
 
     public void createLoop() {
