@@ -169,7 +169,7 @@ public class AllPractice {
     }
 
     public Node findKthNode(int index) {
-        if (index < 0 || index >= length) return null;
+        if (index < 0 || head == null) return null;
         Node fast = head;
         Node slow = head;
         for (int i = 0; i < index; i++) {
