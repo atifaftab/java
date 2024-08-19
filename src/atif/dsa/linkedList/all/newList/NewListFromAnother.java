@@ -1,5 +1,7 @@
 package atif.dsa.linkedList.all.newList;
 
+import java.util.LinkedList;
+
 public class NewListFromAnother {
     private Node head;
     private Node tail;
@@ -54,18 +56,30 @@ public class NewListFromAnother {
 
     public void newLinkedList() {
         if (head == null || length == 0) return;
+        LinkedList<Integer> integerLinkedList = new LinkedList<>();
         Node temp = head;
-        Node newNode = new Node(0);
-        Node pointer = newNode;
         while (temp != null) {
-            pointer.next = temp;
-            pointer = temp;
+            integerLinkedList.add(temp.value);
             temp = temp.next;
         }
-        newNode = newNode.next;
-        while (newNode != null) {
-            System.out.println(newNode.value);
-            newNode = newNode.next;
+        System.out.println(integerLinkedList);
+    }
+
+    public void newHigherAndLowerLinkedList(int x) {
+        if (head == null || length == 0) return;
+        LinkedList<Integer> higherLinkedList = new LinkedList<>();
+        LinkedList<Integer> lowerLinkedList = new LinkedList<>();
+        Node temp = head;
+        while (temp != null) {
+            if (temp.value >= x) {
+                higherLinkedList.add(temp.value);
+            } else {
+                lowerLinkedList.add(temp.value);
+            }
+            temp = temp.next;
         }
+        System.out.println("Linkedlist with value higher or equal than " + x + " \n " + higherLinkedList);
+        System.out.println("Linkedlist with value lower than " + x + " \n " + lowerLinkedList);
+
     }
 }
