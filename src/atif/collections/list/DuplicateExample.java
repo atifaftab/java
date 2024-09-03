@@ -10,14 +10,17 @@ public class DuplicateExample {
 
 
         List<Integer> list = List.of(54, 25, 1, 8, 25, 6, 7, 54);
-        List<Integer> unique = new ArrayList<>();
-        HashSet<Integer> duplicate = new HashSet<>();
+        List<Integer> duplicate = new ArrayList<>();
+        HashSet<Integer> uniques = new HashSet<>();
         for (int n : list) {
-            if (!duplicate.add(n)) {
-                unique.add(n);
+            if (!uniques.add(n)) {
+                duplicate.add(n);
             }
         }
-        System.out.println(unique);
+        System.out.println("------ basic start---------");
+        System.out.println("duplicates: " + duplicate);
+        System.out.println("unique: " + uniques);
+        System.out.println("------ basic end---------");
 
         //Gemini
         List<Integer> list1 = list.stream()
@@ -45,7 +48,7 @@ public class DuplicateExample {
 //        Set<Integer> dupsSet = list.stream().filter(n -> !set1.add(n)).collect(Collectors.toSet());
 //        System.out.println("dupsSet = " + dupsSet);
         Set<Integer> set2 = new HashSet<>();
-        Set<Integer> dubSet = list.stream().filter(n ->!set2.add(n)).collect(Collectors.toSet());
+        Set<Integer> dubSet = list.stream().filter(n -> !set2.add(n)).collect(Collectors.toSet());
         System.out.println("dubSet = " + dubSet);
     }
 
