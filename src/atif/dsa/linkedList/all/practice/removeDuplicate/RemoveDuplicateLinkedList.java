@@ -87,4 +87,19 @@ public class RemoveDuplicateLinkedList {
             current = current.next;
         }
     }
+
+    public void removeDuplicates() {
+        Set<Integer> uniqueNodeValues = new HashSet<>();
+        Node current = head;
+        Node pre = null;
+        while (current != null) {
+            if (uniqueNodeValues.add(current.value)) {
+                pre = current;
+            } else {
+                pre.next = current.next;
+                length--;
+            }
+            current = current.next;
+        }
+    }
 }

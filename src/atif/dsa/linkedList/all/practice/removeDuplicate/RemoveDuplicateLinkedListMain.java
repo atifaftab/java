@@ -10,8 +10,8 @@ public class RemoveDuplicateLinkedListMain {
         list.append(2);
         list.append(5);
         list.printList();
-        System.out.println("---- removing dublicate -------");
-        list.removeDuplicate();
+        System.out.println("---- removing duplicate -------");
+        list.removeDuplicates();
         list.printList();
     }
 }
