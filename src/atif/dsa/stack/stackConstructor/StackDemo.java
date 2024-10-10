@@ -26,4 +26,12 @@ public class StackDemo {
             temp = temp.next;
         }
     }
+
+    public void getTop() {
+        System.out.println("top: " + top.value);
+    }
+
+    public void getHeight() {
+        System.out.println("height: " + height);
+    }
 }
