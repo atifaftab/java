@@ -6,8 +6,14 @@ public class StackDemoMain {
         stackDemo.getTop();
         stackDemo.getHeight();
         stackDemo.printStack();
-        System.out.println("pushing new value");
+        System.out.println("---- PUSH ----");
         stackDemo.push(49);
+        stackDemo.push(34);
+        stackDemo.push(78);
+        stackDemo.push(5);
+        stackDemo.printStack();
+        System.out.println("---- POP ----");
+        System.out.println(stackDemo.pop().value);
         stackDemo.printStack();
     }
 }
