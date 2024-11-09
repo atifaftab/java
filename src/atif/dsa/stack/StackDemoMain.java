@@ -1,4 +1,4 @@
-package atif.dsa.stack.stackConstructor;
+package atif.dsa.stack;
 
 public class StackDemoMain {
     public static void main(String[] args) {
