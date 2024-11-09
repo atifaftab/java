@@ -41,4 +41,30 @@ public class QueueDemo {
     public void printLength() {
         System.out.println("Length: " + length);
     }
+
+    public void enqueue(int value) {
+        Node node = new Node(value);
+        if (length == 0) {
+            first = node;
+            last = node;
+        } else {
+            last.next = node;
+            last = node;
+        }
+        length++;
+    }
+
+    public Node dequeue() {
+        if (length == 0) return null;
+        Node temp = first;
+        if (length == 1) {
+            first = null;
+            last = null;
+        } else {
+            first = first.next;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
 }
