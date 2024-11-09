@@ -6,6 +6,8 @@ public class StackDemoMain {
         stackDemo.getTop();
         stackDemo.getHeight();
         stackDemo.printStack();
+        System.out.println("pushing new value");
+        stackDemo.push(49);
+        stackDemo.printStack();
     }
-
 }
