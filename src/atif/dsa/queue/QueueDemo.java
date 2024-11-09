@@ -31,10 +31,14 @@ public class QueueDemo {
     }
 
     public void printFirst() {
-        System.out.println("first: " + first);
+        System.out.println("first: " + first.value);
     }
 
     public void printLast() {
-        System.out.println("Last: " + last);
+        System.out.println("Last: " + last.value);
+    }
+
+    public void printLength() {
+        System.out.println("Length: " + length);
     }
 }
