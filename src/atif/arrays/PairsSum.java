@@ -19,6 +19,9 @@ public class PairsSum {
         System.out.println(findSumOfPairs(numbers, k));
         System.out.println("====  new method =====");
         System.out.println(Arrays.toString(twoSum(numbers, k)));
+        System.out.println("====  new method =====");
+        System.out.println(Arrays.toString(twoSumMaxAndMin(numbers, k)));
+
     }
 
     //better solution
@@ -45,6 +48,21 @@ public class PairsSum {
                     twoSumArr[1] = nums[j];
                 }
             }
+        }
+        return twoSumArr;
+    }
+
+    public  static int[] twoSumMaxAndMin(int[] nums, int target){
+        int[] twoSumArr = new int[2];
+        for (int i =0; i< nums.length; i++){
+            for (int j=nums.length-1; j>=0; j--){
+                if (nums[i] + nums[j] == target){
+                    twoSumArr[0] = nums[i];
+                    twoSumArr[1] = nums[j];
+                }
+                break;
+            }
+            break;
         }
         return twoSumArr;
     }
