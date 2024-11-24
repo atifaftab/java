@@ -22,6 +22,8 @@ public class OddBeforeEven {
         }
         System.out.println(Arrays.toString(copyArr));
 
+        //second method
+        System.out.println("-----2nd method -----");
         int[] carr = new int[numbers.length];
         int x = 0;
         int y = numbers.length - 1;
@@ -35,13 +37,32 @@ public class OddBeforeEven {
         System.out.println(Arrays.toString(carr));
 
         //using stream
+        System.out.println("-----3rd method -----");
 
-        Object[] newArray = Stream.of(IntStream.of(numbers).filter(i -> i % 2 != 0).boxed().toArray(),
-                        IntStream.of(numbers).filter(i -> i % 2 == 0).boxed().toArray())
-                .flatMap(Arrays::stream)
-                .toArray();
+//        Object[] newArray = Stream.of(
+//                        IntStream.of(numbers).filter(i -> i % 2 != 0).boxed().toArray(),
+//                        IntStream.of(numbers).filter(i -> i % 2 == 0).boxed().toArray())
+//                .flatMap(Arrays::stream)
+//                .toArray();
 
+        Integer[] newArray = Stream.concat(
+                IntStream.of(numbers).filter(i -> i % 2 != 0).boxed(),
+                IntStream.of(numbers).filter(i -> i % 2 == 0).boxed()
+        ).toArray(Integer[]::new);
         System.out.println(Arrays.toString(newArray));
 
+
+        System.out.println("-----  practice -----");
+
+        int start = 0, end = numbers.length - 1;
+        int[] oddEvenArray = new int[numbers.length];
+        for (int n : numbers) {
+            if (n % 2 != 0) {
+                oddEvenArray[start++] = n;
+                continue;
+            }
+            oddEvenArray[end--] = n;
+        }
+        System.out.println(Arrays.toString(oddEvenArray));
     }
 }
