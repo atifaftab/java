@@ -6,18 +6,30 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 
 public class BestTimeToBuyAndSellStock {
     public static void main(String[] args) {
-        int[] prices = new int[]{7,1,5,3,6,4,11};
-        maxProfit(prices);
+        int[] prices = new int[]{7, 1, 5, 3, 6, 4};
+        System.out.println(maxProfit(prices));
+        System.out.println("====  2nd method ====");
+        System.out.println(maxProfit2(prices));
     }
 
-    private static void maxProfit(int[] prices) {
-        int min = prices[0];
+    private static int maxProfit(int[] prices) {
         int profit = 0;
-        for (int i=0; i<prices.length;i++){
-            for (int j=i+1;j<prices.length;j++){
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
                 profit = Math.max(profit, prices[j] - prices[i]);
             }
         }
-        System.out.println(profit);
+        return profit;
+    }
+
+    private static int maxProfit2(int[] prices) {
+        int min = prices[0];
+        int profit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < min)
+                min = prices[i];
+            profit = Math.max(profit, prices[i] - min);
+        }
+        return profit;
     }
 }
