@@ -14,11 +14,14 @@ import java.util.Map;
 public class TwoSum {
     public static void main(String[] args) {
 //        int[] nums = {2, 7, 11, 15};
-        int[] nums = {5, 7, 4, 15, 8, 34};
-        int target = 23;
-        System.out.println(Arrays.toString(twoSumMethod(nums, target)));
+//        int[] nums = {5, 7, 4, 15, 8, 34};
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int target = 10;
+        System.out.println(Arrays.toString(twoSumMethod3(nums, target)));
     }
 
+
+    //best method
     private static int[] twoSumMethod(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -26,6 +29,32 @@ public class TwoSum {
             if (map.containsKey(diff))
                 return new int[]{map.get(diff), i};
             map.put(nums[i], i);
+        }
+        return null;
+    }
+
+    //brute force
+
+    private static int[] twoSumMethod2(int[] nums, int target) {
+//        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return null;
+    }
+
+    private static int[] twoSumMethod3(int[] nums, int target) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = nums.length - 1; j >= 0; j--) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+            }
         }
         return null;
     }
