@@ -4,7 +4,8 @@ import java.util.*;
 
 public class ContainsDuplicate {
     public static void main(String[] args) {
-        int[] num = new int[]{2, 45, 2, 36, 78, 1, 9, 4};
+//        int[] num = new int[]{2, 45, 2, 36, 78, 1, 9, 4};
+        int[] num = new int[]{1,8,9,5,9};
 //        int[] num = new int[]{1, 2, 3, 1};
 //        int[] num = new int[]{1, 2, 3, 4};
 //        int[] num = new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
