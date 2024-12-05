@@ -13,6 +13,8 @@ public class ProductOfArrayExceptSelf {
         System.out.println(Arrays.toString(productOfArrayExceptSelfMethod(nums)));
         System.out.println("=== brute force ====");
         System.out.println(Arrays.toString(productOfArrayExceptSelfMethod2(nums)));
+        System.out.println("=== brute force ====");
+        System.out.println(Arrays.toString(productOfArrayExceptSelfMethod3(nums)));
     }
 
     //using division which is not allowed in this question
@@ -38,6 +40,22 @@ public class ProductOfArrayExceptSelf {
                     product = product * nums[j];
             }
             productArr[i] = product;
+        }
+        return productArr;
+    }
+
+    //best solution
+    private static int[] productOfArrayExceptSelfMethod3(int[] nums) {
+        int[] productArr = new int[nums.length];
+        Arrays.fill(productArr, 1);
+        int pre = 1, post = 1;
+        for (int i = 0; i < nums.length; i++) {
+            productArr[i] = pre;
+            pre = nums[i] * pre;
+        }
+        for (int j = nums.length - 1; j >= 0; j--) {
+            productArr[j] = productArr[j] * post;
+            post = nums[j] * post;
         }
         return productArr;
     }
