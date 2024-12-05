@@ -17,6 +17,8 @@ public class ProductOfArrayExceptSelf {
         System.out.println(Arrays.toString(productOfArrayExceptSelfMethod3(nums)));
         System.out.println("=== best solution ====");
         System.out.println(Arrays.toString(productOfArrayExceptSelfMethod4(nums)));
+        System.out.println("=== fastest solution ====");
+        System.out.println(Arrays.toString(productOfArrayExceptSelfMethod5(nums)));
     }
 
     //using division which is not allowed in this question
@@ -75,5 +77,20 @@ public class ProductOfArrayExceptSelf {
             current *= nums[j];
         }
         return productArr;
+    }
+
+    private static int[] productOfArrayExceptSelfMethod5(int[] nums) {
+        int[] prev = new int[nums.length+1];
+        int[] next = new int[nums.length+1];
+        next[nums.length] = 1;
+        prev[0] = 1;
+        for(int i=0;i<nums.length;i++){
+            prev[i+1] = prev[i] * nums[i];
+            next[nums.length-i-1] = nums[nums.length-i-1] * next[nums.length-i];
+        }
+        for(int i=0;i<nums.length;i++) {
+            nums[i] = prev[i] * next[i+1];
+        }
+        return nums;
     }
 }
