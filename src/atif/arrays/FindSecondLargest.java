@@ -1,10 +1,12 @@
 package atif.arrays;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class FindSecondLargest {
     public static void main(String[] args) {
         int[] arr = {-1, 87, 343, 233, 0, -934};
+        findSecondLargestMethod(arr);
         //normal way
         int max = arr[0];
         int main = arr[0];
@@ -51,5 +53,9 @@ public class FindSecondLargest {
         System.out.println("first " + first);
         System.out.println("second " + second);
 
+    }
+
+    private static void findSecondLargestMethod(int[] nums) {
+        System.out.println(Arrays.stream(nums).distinct().boxed().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(-1));
     }
 }
