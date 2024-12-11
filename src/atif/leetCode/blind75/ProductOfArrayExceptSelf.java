@@ -63,6 +63,7 @@ public class ProductOfArrayExceptSelf {
         }
         return productArr;
     }
+    //best solution
     private static int[] productOfArrayExceptSelfMethod4(int[] nums) {
         int[] productArr = new int[nums.length];
         Arrays.fill(productArr, 1);
